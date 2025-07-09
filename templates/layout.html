@@ -33,12 +33,7 @@
         .nav-link {
             text-transform: capitalize;
         }
-
-         
-        
-        
-        
-
+    
         @media (max-width: 576px) {
             .navbar-brand img {
                 width: 100px;
@@ -273,7 +268,7 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav  nav-underline mt-2 m-auto">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="{% url 'home'%}"
+                            <a class="nav-link active" aria-current="page" href="{% url 'my_app:home_two'%}"
                                 style="color:#063970;"><b>Home</b></a>
                         </li>
                         <li class="nav-item">
@@ -290,10 +285,12 @@
                             <b>Services</b>
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">Action</a></li>
-                            <li><a class="dropdown-item" href="#">Another action</a></li>
-                            <li><hr class="dropdown-divider"></li>
-                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            <li><a class="dropdown-item" href="{% url "my_app:about" %}">Search Engine optimisation</a></li>
+                            <li><a class="dropdown-item" href="#">Website Development</a></li>
+                            <li><a class="dropdown-item" href="#">Google My Business Listing</a></li>
+                            <li><a class="dropdown-item" href="#">Pay Per Click</a></li>
+                            <li><a class="dropdown-item" href="#">Content Writing</a></li>
+                            <li><a class="dropdown-item" href="#">Social Media Marketing</a></li>
                         </ul>
                         </li>
                                         
