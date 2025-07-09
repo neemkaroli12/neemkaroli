@@ -202,6 +202,8 @@
         max-width: 900px;
         width: 100%;
         position:relative;
+        display: inline;
+        
          }
 .slider {
         display: flex;
@@ -274,34 +276,34 @@
                         <li class="nav-item">
                             <a class="nav-link" href="#" style="color:#063970;"><b>About us</b></a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link " href="#" style="color:#063970;"><b>Blog</b></a>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" style="color:#063970;"href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <b>Services</b>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="{% url "my_app:about" %}">Search Engine optimisation</a></li>
+                                <li><a class="dropdown-item" href="#">Website Development</a></li>
+                                <li><a class="dropdown-item" href="#">Google My Business Listing</a></li>
+                                <li><a class="dropdown-item" href="#">Pay Per Click</a></li>
+                                <li><a class="dropdown-item" href="#">Content Writing</a></li>
+                                <li><a class="dropdown-item" href="#">Social Media Marketing</a></li>
+                            </ul>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link " href="#" style="color:#063970;"><b>Contact us</b></a>
-                        </li>
-                      <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" style="color:#063970;"href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            <b>Services</b>
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="{% url "my_app:about" %}">Search Engine optimisation</a></li>
-                            <li><a class="dropdown-item" href="#">Website Development</a></li>
-                            <li><a class="dropdown-item" href="#">Google My Business Listing</a></li>
-                            <li><a class="dropdown-item" href="#">Pay Per Click</a></li>
-                            <li><a class="dropdown-item" href="#">Content Writing</a></li>
-                            <li><a class="dropdown-item" href="#">Social Media Marketing</a></li>
-                        </ul>
-                        </li>
-                                        
+                        
                         <li class="nav-item">
                             <a class="nav-link" href="#" style="color:#063970;"><b>Portfolio</b></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link " href="#" style="color:#063970;"><b>Blog</b></a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#" style="color:#063970;"><b>Career</b></a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link " href="#" style="color:#063970;"><b>Partner programs</b></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link " href="#" style="color:#063970;"><b>Contact us</b></a>
                         </li>
                     </ul>
 
