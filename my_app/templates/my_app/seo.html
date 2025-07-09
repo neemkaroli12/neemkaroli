@@ -1,0 +1,247 @@
+{% extends "layout.html" %}
+{% load static %}
+{% block content %}
+<style>
+    .puzzle-container {
+      width: auto;
+      height: 200px;
+      position: relative;
+      background: linear-gradient(-45deg, #063970, #2f80ed, #00c9ff, #f72585);
+      background-size: 800% 800%;
+      animation: gradientMove 10s ease infinite;
+      border: 2px solid #063970;
+      overflow: hidden;
+      border-radius: 8px;
+    }
+    .pieces-wrapper{
+        position:relative;
+        left:500px;
+    }
+    @media(max-width:768px){
+        .pieces-wrapper{
+          position: absolute;
+          left:40px;
+        }
+    }
+
+    @keyframes gradientMove {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    .piece {
+      width: 100px;
+      height: 100px;
+      background: rgba(0, 0, 0, 0.7);
+      color: #fff;
+      font-size: 48px;
+      font-weight: bold;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      top: 75px; 
+      opacity: 0;
+      border-radius: 12%;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+      transform: scale(1.1);
+      animation: slideIn 0.5s forwards;
+    }
+
+    .piece:nth-child(1) {
+      top: 75px;
+      left: 120px;
+      transition: all 1s ease-in-out;
+    }
+
+    .piece:nth-child(2) {
+      top: 75px;
+      left: 320px;
+      transition: all 1s ease-in-out 0.5s;
+    }
+
+    .piece:nth-child(3) {
+      top: -120px;
+      left: 100px;
+      transition: all 1s ease-in-out 1s;
+    }
+
+    .animate .piece:nth-child(1) {
+      left: 0;
+      opacity: 1;
+    }
+
+    .animate .piece:nth-child(2) {
+      left: 200px;
+      opacity: 1;
+    }
+
+    .animate .piece:nth-child(3) {
+      top: 75px;
+      opacity: 1;
+    }
+  .seo-card {
+  height: 100%;
+  border-radius: 12px;
+  transition: transform 0.4s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.seo-card:hover {
+  transform: translateY(-8px);
+}
+
+.card-body h5 {
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.card-body ul {
+  padding-left: 18px;
+}
+
+.card-body ul li {
+  font-size: 0.95rem;
+  margin-bottom: 6px;
+}
+
+
+
+ 
+</style>
+<div class="puzzle-container" id="puzzle">
+  <div class="pieces-wrapper">
+  <div class="piece">S</div>
+  <div class="piece">O</div>
+  <div class="piece">E</div>
+  </div>
+</div>
+
+<div class="container py-4">
+  <h2 class="text-center mb-4">Effective SEO Services Include</h2>
+  <div class="row g-4" id="seo-cards">
+    
+  </div>
+</div>
+
+
+
+<script>
+  window.onload = () => {
+    const container = document.getElementById("puzzle");
+    container.classList.add("animate");
+  };
+
+const seoServices = [
+  {
+    title: "1. Set an SEO Strategy",
+    points: [
+      "Define clear goals (traffic, leads, rankings)",
+      "Understand your audience’s needs",
+      "Plan team, tools, and budget",
+      "Decide in-house vs agency"
+    ]
+  },
+  {
+    title: "2. Conduct Keyword Research",
+    points: [
+      "Find keywords your audience uses",
+      "Use tools: Google Planner, SEMrush, Ahrefs",
+      "Analyze intent: informational, commercial, etc."
+    ]
+  },
+  {
+    title: "3. Optimize for Search Intent",
+    points: [
+      "Understand user goals behind queries",
+      "Align content with keyword intent",
+      "Target multiple intent types"
+    ]
+  },
+  {
+    title: "4. On-Page Optimization",
+    points: [
+      "Write SEO titles & meta descriptions",
+      "Use H1-H3 for structure",
+      "Create clean URLs with keywords",
+      "Optimize images and internal links"
+    ]
+  },
+  {
+    title: "5. Quality Content Creation",
+    points: [
+      "Produce valuable, original content",
+      "Use headings and visual elements",
+      "Keep content engaging and scannable"
+    ]
+  },
+  {
+    title: "6. Build Quality Backlinks",
+    points: [
+      "Create link-worthy content",
+      "Do guest posting on niche sites",
+      "Promote content for natural shares"
+    ]
+  },
+  {
+    title: "7. Mobile & Technical SEO",
+    points: [
+      "Make your site responsive",
+      "Speed up loading time",
+      "Fix crawl errors and broken links"
+    ]
+  },
+  {
+    title: "8. Monitor & Analyze SEO",
+    points: [
+      "Track traffic, rankings, bounce rate",
+      "Use GA, GSC, SEMrush, Ahrefs",
+      "Continuously refine strategies"
+    ]
+  }
+];
+function getRandomGradient() {
+  const getRandomColor = () =>
+    `hsl(${Math.floor(Math.random() * 360)}, 70%, 60%)`;
+
+  return `linear-gradient(135deg, ${getRandomColor()}, ${getRandomColor()})`;
+}
+
+const container = document.getElementById('seo-cards');
+
+seoServices.forEach((service) => {
+  const col = document.createElement('div');
+  col.className = 'col-lg-6 col-md-6';
+
+  const card = document.createElement('div');
+  card.className = 'card seo-card h-100';
+  card.style.background = getRandomGradient();
+
+  const body = document.createElement('div');
+  body.className = 'card-body';
+
+  const title = document.createElement('h5');
+  title.className = 'card-title';
+  title.textContent = service.title;
+
+  const list = document.createElement('ul');
+  service.points.forEach(point => {
+    const li = document.createElement('li');
+    li.textContent = point;
+    list.appendChild(li);
+  });
+
+  body.appendChild(title);
+  body.appendChild(list);
+  card.appendChild(body);
+  col.appendChild(card);
+  container.appendChild(col);
+});
+
+</script>
+
+
+
+{% endblock %}
+  
