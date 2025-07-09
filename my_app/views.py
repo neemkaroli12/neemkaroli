@@ -7,3 +7,6 @@ def home_two(request):
 
 def about_seo(request):
     return render(request,'my_app/seo.html')
+
+def web(request):
+    return render(request,'my_app/web.html')
