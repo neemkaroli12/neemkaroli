@@ -331,7 +331,7 @@
                                 <li><a class="dropdown-item" href="#">Google My Business Listing</a></li>
                                 <li><a class="dropdown-item" href="#">Pay Per Click</a></li>
                                 <li><a class="dropdown-item" href="#">Content Writing</a></li>
-                                <li><a class="dropdown-item" href="#">Social Media Marketing</a></li>
+                                <li><a class="dropdown-item" href="{% url "my_app:media" %}">Social Media Marketing</a></li>
                             </ul>
                         </li>
                         
@@ -411,8 +411,8 @@
             <div class="col-lg-3 col-md-3 mt-3 ">
                 <h3 class="ms-1" style="color:white;">Services</h3>
                 <ul>
-                    <li ><a href="#" style="margin-left:-30px;">Social Media Marketing</a></li>
-                    <li ><a href="#" style="margin-left:-30px;">Website Development</a></li>
+                    <li ><a href="{% url "my_app:media" %}" style="margin-left:-30px;">Social Media Marketing</a></li>
+                    <li ><a href="{% url "my_app:web" %}" style="margin-left:-30px;">Website Development</a></li>
                     <li ><a href="#" style="margin-left:-30px;">Online Advertising</a></li>
                     <li ><a href="#" style="margin-left:-30px;">influence Marketing</a></li>
                     <li ><a href="#" style="margin-left:-30px;">Search Engine otimisation</a></li>

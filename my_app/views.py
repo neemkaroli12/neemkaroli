@@ -10,3 +10,6 @@ def about_seo(request):
 
 def web(request):
     return render(request,'my_app/web.html')
+
+def media(request):
+    return render(request,'my_app/smm.html')

@@ -1,9 +1,91 @@
 {% extends "layout.html" %}
 {% load static %}
 {% block content %}
+<style>
+.smm-box {
+  padding: 40px 50px;
+  filter:drop-shadow:20px 20px 20px #23a6d5;
+  border-radius:10px;
+  color: white;
+  text-align: center;
+  box-shadow: 0 0 30px rgba(255, 255, 255, 0.2);
+  animation: popIn 1s ease-out, floatEffect 3s ease-in-out infinite;
+  backdrop-filter: blur(10px);
+  width: auto;
+  margin: 0 auto;
+  background: linear-gradient(270deg, #ff4b2b, #ff416c, #1e90ff, #23a6d5, #0f2027);
+  background-size: 1000% 1000%;
+  animation: gradientBG 15s ease infinite;
+}
+h2{
+    font-size:2.5rem;
+}
+
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes popIn {
+  0% {
+    transform: scale(0.3);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes floatEffect {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.marquee-wrapper {
+  overflow: hidden;
+  width: 100%;
+  margin-top: 20px;
+  position: relative;
+  height: 30px;
+}
+
+.scroll-text {
+  white-space: nowrap;
+  display: inline-block;
+  animation: scrollLeft 12s linear infinite;
+  color: #f1f1f1;
+  font-size: 1.2rem;
+}
+
+@keyframes scrollLeft {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+</style>
+<div class="smm-box">
+  <h2>🚀 Social Media Marketing</h2>
+  <div class="marquee-wrapper">
+    <div class="scroll-text">
+      Facebook • Instagram • Twitter • LinkedIn • YouTube • Pinterest • Snapchat • Facebook • Instagram • Twitter • LinkedIn •
+    </div>
+  </div>
+</div>
 
 
 
 
 
-{% endblock content %}
+{% endblock %}
