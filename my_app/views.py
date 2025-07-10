@@ -13,3 +13,6 @@ def web(request):
 
 def media(request):
     return render(request,'my_app/smm.html')
+
+def contact(request):
+    return render(request,'my_app/contact.html')
