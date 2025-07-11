@@ -16,3 +16,6 @@ def media(request):
 
 def contact(request):
     return render(request,'my_app/contact.html')
+
+def content(request):
+    return render(request,'my_app/content.html')

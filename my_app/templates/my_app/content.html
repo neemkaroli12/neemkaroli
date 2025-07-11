@@ -1,0 +1,157 @@
+{% extends "layout.html" %}
+{% load static %}
+{% block content%}
+<style>
+
+.content-section {
+  width: auto;
+  padding: 40px 20px;
+  
+  background-size: 600% 600%;
+  animation: bgMove 15s ease infinite;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+.content-head {
+  padding: 40px 50px;
+  filter:drop-shadow:20px 20px 20px #23a6d5;
+  color: white;
+  text-align: center;
+  box-shadow: 0 0 30px rgba(255, 255, 255, 0.2);
+  animation: popIn 1s ease-out, floatEffect 3s ease-in-out infinite;
+  backdrop-filter: blur(10px);
+  width: auto;
+  margin: 0 auto;
+  background: linear-gradient(270deg, #ff4b2b, #ff416c, #1e90ff, #23a6d5, #0f2027);
+  background-size: 1000% 1000%;
+  animation: gradientBG 15s ease infinite;
+}
+h2{
+    font-size:3.1rem;
+}
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes popIn {
+  0% {
+    transform: scale(0.3);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes floatEffect {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+
+
+@keyframes bgMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.card {
+ background: linear-gradient(135deg, #43cea2, #185a9d);
+  color: #222;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  transform: translateY(60px);
+  transition: all 0.8s ease-out;
+}
+
+.card.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.card h3 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+
+.card p {
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+</style>
+<div class="content-head">
+    <h2> ✍Content Writing</h2>
+</div>
+<div class="content-section">
+    <div class="cards">
+      <div class="card">
+        <h3>✍ Content Writing Services</h3>
+        <p>Elevate your brand’s voice with content that informs, inspires, and converts. Our content writing services are crafted to align with your business goals, creating impactful narratives that resonate and strengthen your digital presence.</p>
+      </div>
+
+      <div class="card">
+        <h3>🧩 Tailored Content Strategy</h3>
+        <p>We dive into your industry and audience to develop a content blueprint that supports marketing and reflects your brand’s purpose.</p>
+      </div>
+
+      <div class="card">
+        <h3>📰 Website & Blog Content</h3>
+        <p>From SEO blogs to high-converting pages, we craft content that engages, guides, and builds your brand’s authority.</p>
+      </div><div class="card">
+        <h3>📢 Marketing Copy & Campaign Messaging</h3>
+        <p>Our persuasive copywriting compels action — ideal for emails, product descriptions, and ads that drive conversions.</p>
+      </div>
+
+      <div class="card">
+        <h3>🔍 SEO-Focused Writing</h3>
+        <p>Boost visibility with keyword-rich, authentic content that ranks high while staying true to your brand voice.</p>
+      </div>
+
+      <div class="card">
+        <h3>📚 Thought Leadership & Industry Insights</h3>
+        <p>Position your brand as an expert with articulate articles and whitepapers that earn respect and build trust.</p>
+      </div>
+
+      <div class="card">
+        <h3>🧠 Creative & Cultural Sensitivity</h3>
+      <p>We write with nuance and cultural awareness, making your message relatable to diverse and global audiences.</p>
+      </div>
+    </div>
+  </div>
+
+<script>
+   window.onload = () => {
+  const cards = document.querySelectorAll('.card');
+  cards.forEach((card, i) => {
+    setTimeout(() => {
+      card.classList.add('visible');
+    }, i * 150); // delay each card
+  });
+};
+
+
+</script>
+
+
+
+{% endblock  %}

@@ -11,5 +11,6 @@ urlpatterns = [
         path('seo/',views.about_seo ,name='about'),
         path('web/',views.web, name='web'),
         path('media/',views.media,name='media'),
-        path('contact/',views.contact,name='contact')
+        path('contact/',views.contact,name='contact'),
+        path('content/',views.content,name='content')
 ]
