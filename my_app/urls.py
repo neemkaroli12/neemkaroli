@@ -12,5 +12,6 @@ urlpatterns = [
         path('web/',views.web, name='web'),
         path('media/',views.media,name='media'),
         path('contact/',views.contact,name='contact'),
-        path('content/',views.content,name='content')
+        path('content/',views.content,name='content'),
+        path('pay/',views.pay,name='pay')
 ]

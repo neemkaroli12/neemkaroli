@@ -19,3 +19,6 @@ def contact(request):
 
 def content(request):
     return render(request,'my_app/content.html')
+
+def pay(request):
+    return render(request,'my_app/ppc.html')

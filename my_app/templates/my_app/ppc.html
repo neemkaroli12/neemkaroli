@@ -1,0 +1,140 @@
+{% extends "layout.html" %}
+{% load static %}
+{% block title %}Pay Per click {% endblock  %}
+{% block content %}
+<style>
+ .ppc-wrapper {
+   background: linear-gradient(135deg, #1f1c2c, #928dab);
+  padding: 60px 20px;
+  text-align: center;
+  overflow: hidden;
+}
+.ppc-head{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 150px;
+    background: linear-gradient(-45deg, #ff416c, #ff4b2b, #1e3c72, #2a5298);
+    background-size: 800% 800%;
+    animation: gradientMove 10s ease infinite;
+}
+@keyframes gradientMove {
+  0% {background-position: 0% 50%;}
+  50% {background-position: 100% 50%;}
+  100% {background-position: 0% 50%;}
+}
+
+.ppc-title {
+  font-size: 2.5rem;
+  color:rgb(224, 231, 238);
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+
+
+.ppc-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.ppc-card {
+  background: #ffffff;
+  padding: 25px;
+  border-radius: 20px;
+  box-shadow: 0 12px 24px rgba(0,0,0,0.08);
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+  transform: translateY(30px);
+  opacity: 0;
+}
+
+.ppc-card h3 {
+  color: #2f80ed;
+  font-size: 1.3rem;
+  margin-bottom: 12px;
+}
+
+.ppc-card p {
+  color: #333;
+  font-size: 0.98rem;
+}
+
+
+.reveal.show {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+
+.ppc-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 16px 32px rgba(0,0,0,0.12);
+}
+
+
+</style>
+<div class="ppc-head">
+  <h2 class="ppc-title">💰 Pay-Per-Click (PPC) </h2>
+  
+</div>
+<section id="ppc-section" class="ppc-wrapper">
+  <div class="ppc-grid">
+    <div class="ppc-card reveal">
+      <h3>🎯 Precision Targeting</h3>
+      <p>Connect with ideal customers using deep audience insights & cross-platform targeting.</p>
+    </div>
+
+    <div class="ppc-card reveal">
+      <h3>🧠 Intelligent Keywords</h3>
+      <p>High-value keywords researched for maximum ROI—cutting waste, boosting results.</p>
+    </div>
+
+    <div class="ppc-card reveal">
+      <h3>💡 Creative Campaigns</h3>
+      <p>Scroll-stopping visuals and strategies designed to engage and convert.</p>
+    </div>
+
+    <div class="ppc-card reveal">
+      <h3>📊 Real-Time Analytics</h3>
+      <p>Transparent dashboards with real-time data and actionable insights.</p>
+    </div>
+
+    <div class="ppc-card reveal">
+      <h3>🚀 Conversion Pages</h3>
+      <p>Landing pages that turn clicks into leads, sales, and more—optimized for UX.</p>
+    </div>
+
+    <div class="ppc-card reveal">
+      <h3>🤝 ROI Optimization</h3>
+      <p>Smarter budget management with continuous performance-based adjustments.</p>
+    </div>
+  </div>
+</section>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+  const reveals = document.querySelectorAll(".reveal");
+
+  function revealOnScroll() {
+    const windowHeight = window.innerHeight;
+    reveals.forEach(el => {
+      const elementTop = el.getBoundingClientRect().top;
+      const visible = 100;
+
+      if (elementTop < windowHeight - visible) {
+        el.classList.add("show");
+      }
+    });
+  }
+
+  window.addEventListener("scroll", revealOnScroll);
+  revealOnScroll(); // Reveal on load
+});
+
+</script>
+
+
+{% endblock  %}  
