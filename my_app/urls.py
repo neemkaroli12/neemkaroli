@@ -13,5 +13,6 @@ urlpatterns = [
         path('media/',views.media,name='media'),
         path('contact/',views.contact,name='contact'),
         path('content/',views.content,name='content'),
-        path('pay/',views.pay,name='pay')
+        path('pay/',views.pay,name='pay'),
+        path('gmb/',views.gmb,name='gmb'),
 ]

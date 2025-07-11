@@ -22,3 +22,6 @@ def content(request):
 
 def pay(request):
     return render(request,'my_app/ppc.html')
+
+def gmb(request):
+    return render(request,'my_app/gmb.html')
