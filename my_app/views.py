@@ -1,6 +1,10 @@
 from django.shortcuts import render
+from .forms import ContactForm 
 
-# Create your views here.
+def contact(request):
+    form = ContactForm()
+    return render(request, 'my_app/contact.html', {'myData': form})
+
 
 def home_two(request):
     return render(request,'my_app/index.html')
@@ -14,8 +18,6 @@ def web(request):
 def media(request):
     return render(request,'my_app/smm.html')
 
-def contact(request):
-    return render(request,'my_app/contact.html')
 
 def content(request):
     return render(request,'my_app/content.html')
