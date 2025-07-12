@@ -15,4 +15,5 @@ urlpatterns = [
         path('content/',views.content,name='content'),
         path('pay/',views.pay,name='pay'),
         path('gmb/',views.gmb,name='gmb'),
+        path('about/',views.about_us,name='about_us')
 ]

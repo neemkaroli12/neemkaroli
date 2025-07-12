@@ -27,3 +27,6 @@ def pay(request):
 
 def gmb(request):
     return render(request,'my_app/gmb.html')
+    
+def about_us(request):
+    return render(request,'my_app/about.html')

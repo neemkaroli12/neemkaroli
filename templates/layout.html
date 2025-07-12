@@ -301,7 +301,7 @@
                                 style="color:#063970;"><b>Home</b></a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#" style="color:#063970;"><b>About us</b></a>
+                            <a class="nav-link" href="{% url "my_app:about_us" %}" style="color:#063970;"><b>About us</b></a>
                         </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" style="color:#063970;"href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -352,7 +352,189 @@
     </section>
     
     {% block content %}
-            this is content page
+            <div class="row align-items-center me-0 bg-img">
+  <div class="col-lg-7 col-md-7" style="border-radius: 10px;">
+    <h3 class="text-dark ms-3 animated-text">
+      <span>Unlock</span> <span>Growth</span> <span>Potential</span>
+      <span>with</span> <span>Free</span> <span>Consulting</span>
+      <span>from</span> <span>Industry</span> <span>Experts!</span>
+    </h3>
+    <h5 class="ms-3 text-success subheading-animate">
+      Struggling to Grow or Just Starting Out? We’re Your Business Partner<br>
+      for Rapid Growth in India and Beyond.
+    </h5>
+    <p class="text-dark mt-4 ms-3 para-animate" style="font-size: 18px;">
+      We offer end-to-end marketing and business strategy solutions through strong
+      social media presence, serving clients across India and globally<br> (including the Middle East (Dubai),
+      Australia, Canada, Singapore, Africa, and more).
+    </p>
+  </div>
+  <div class="col-lg-5 col-md-5 image-container">
+    <img src="{% static 'image/expressive-young-lady-posing-studio-removebg-preview.png' %}"
+         alt="Big Image"
+         class="img-fluid w-100 animated-image"
+         style="max-height: 500px; object-fit: cover;">
+  </div>
+</div><br><br>
+
+        <div class="container">
+        <div class="slider-wrapper col-lg-12 col-md-12  me-0">
+  
+         <button class="nav-button prev-btn" onclick="prevSlide()">&#10094;</button>
+        <div class="slider" id="customSlider">
+            <div class="slide active">
+              <img src="https://media.istockphoto.com/id/2196146620/photo/digital-people-icons-connected-on-a-global-network-with-futuristic-cityscape-background.jpg?s=1024x1024&w=is&k=20&c=XSrjIPBIHVpb1e0_4kGG2M6KHkcCoGP7sTkTYqsifag=" alt="Slide 1">
+            </div>
+            <div class="slide">
+               <img src="https://media.istockphoto.com/id/1413210242/photo/asian-woman-watching-hologram-screens-business-and-technology-concept-smart-office-gui.jpg?s=2048x2048&w=is&k=20&c=oU6XGW2eA_iKc_FzAKPb3wcbCpaZrUVaV3osqrjIu4k=" alt="Slide 2">
+            </div>
+            <div class="slide">
+               <img src="https://media.istockphoto.com/id/1327568875/photo/healthcare-business-graph-data-and-growth-insurance-healthcare-doctor-analyzing-medical-of.jpg?s=1024x1024&w=is&k=20&c=xcq1ykhvkWXfm4kovjXwuNX10wFfEk8MG0B-xg4dDW4=" alt="Slide 3">
+            </div>
+            <div class="slide">
+               <img src="https://media.istockphoto.com/id/1459488727/photo/business-network-concept-business-meeting-marketing.jpg?s=1024x1024&w=is&k=20&c=x267KVWb_rwhzIvOTPfL4fgtRfQz7YxaOggz7JmVtrA=" alt="Slide 4">
+            </div>
+        </div>
+        <button class="nav-button next-btn" onclick="nextSlide()">&#10095;</button>
+       </div>
+       </div><br><br><br>
+        
+        <div class="container-fluid mt-3" style="box-shadow:10px 7px 20px #17C3B2;">
+            <div class="row col-lg-12 col-md-12 me-0">
+                <h3 class="text-center mt-3" style="color:#17C3B2;">Our Digital Marketing Expertise<br>Our Marketing services
+                is what you need</h3>
+            </div>
+            <div class="row row-cols-1 row-cols-md-3 g-4 mt-4 me-0 ">
+                <div class="col">
+                    <div class="card">
+                        <img src="{% static 'images/10946070.jpg' %}" class="card-img-top" alt="..." height="380">
+                        <div class="card-body">
+                            <h5 class="card-title text-center"><b>SEO</b></h5>
+                            <p class="card-text text-center">
+                               Professional SEO Services to Grow Your Business
+                               We help your website rank higher on search engines with 
+                               smart SEO strategies, including keyword research, 
+                               content optimization, and technical improvements.
+
+                            </p>
+                            <a href="{% url "my_app:about"%}"><button type="button" class="btn btn-info w-100"><b>Show More</b></button></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card">
+                        <img src="{% static 'images/4421964.jpg' %}" class="card-img-top" alt="..." height="380" width="400">
+                        <div class="card-body">
+                            <h5 class="card-title text-center"><b >Website Development</b></h5>
+                            <p class="card-text">
+                                Custom Website Development for Your Business
+                                We build responsive, user-friendly,
+                                and visually appealing websites tailored <br> to your business needs....
+                                
+
+
+                            </p>
+                            <a href="{% url "my_app:web" %}"><button type="button" class="btn btn-info w-100"><b>Show More</b></button></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card">
+                        <img src="https://media.istockphoto.com/id/1305410300/vector/social-influence-marketing-concept.jpg?s=612x612&w=0&k=20&c=T5H0S0MfufBEVoHU-_DGV2DEbct9cqx3ANL5jN1DG20=" class="card-img-top" alt="..." height="380">
+                        <div class="card-body">
+                            <h5 class="card-title text-center"><b>Social Media Marketing</b></h5>
+                            <p class="card-text">Social Media Marketing That Delivers
+                                    We create and manage engaging social media content
+                                    to grow your brand, reach more people, 
+                                    and drive real results across all major platforms.
+
+                            </p>
+                            <a href="{% url "my_app:media" %}"><button type="button" class="btn btn-info w-100"><b>Show More</b></button></a>
+                        </div>
+                    </div>
+                </div>
+    <div class="col">
+                    <div class="card">
+                        <img src="{% static 'images/4266807.jpg' %}" class="card-img-top" alt="..." height="380">
+                        <div class="card-body">
+                        <h5 class="card-title text-center"><b>Google My Busniess Listing</b></h5>
+                        <p class="card-text">Get Discovered with Google My Business Listing
+                            We help your business show up on Google Search 
+                            and Maps by setting up and optimizing your Google My Business profile.
+                            From accurate information to reviews and photos.
+
+</p>
+                        <a href="{% url "my_app:gmb" %}"><button type="button" class="btn btn-info w-100"><b>Show More</b></button></a>
+                        </div>
+                    </div>
+                </div>
+            <div class="col">
+                    <div class="card">
+                        <img src="{% static 'images/3355.jpg'%}" class="card-img-top" alt="..." height="400">
+                        <div class="card-body">
+                        <h5 class="card-title text-center"><b>Pay Per Click-PPC</b></h5>
+                        <p class="card-text">Results-Driven PPC Services
+                        We run targeted PPC ads to help you reach the right audience,
+                         get more leads, and grow your business—fast and within budget.</p>
+                         <a href="{% url "my_app:pay" %}"><button type="button" class="btn btn-info w-100"><b>Show More</b></button></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col"> 
+                    <div class="card">
+                        <img src="{% static 'images/10793.jpg' %}" class="card-img-top" alt="..." height="420">
+                        <div class="card-body">
+                        <h5 class="card-title text-center"><b>Content Writing</b></h5>
+                        <p class="card-text">Engaging Content That Connects and Converts
+                        We provide high-quality content writing services tailored 
+                        to your brand voice and audience. 
+
+                     </p>
+                        <a href="{% url "my_app:content" %}"><button type="button" class="btn btn-info w-100"><b>Show More</b></button></a>
+                        </div>
+                    </div>
+                </div>
+        </div>
+    </div><br><br>
+
+    
+       <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-8 col-md-8">
+                   <h3><b class="text-info intro">Introducing Our Work</b></h3>
+                   <h4><b class="justify-content-center "> Allow us to assist you in outperforming your competitors.</b></h4>
+                   <p>We deliver to the SEO and web design profession new thinking, flexible approach, solid ethics, and years of experience. As the best digital marketing agency in Haldwani, we prioritise learning about our clients’ company objectives. Following that, all decisions are made with those objectives in mind.</p>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row me-0">
+              <div class="col-lg-10 col-md-10">
+                <img src="https://th.bing.com/th/id/R.85099afb5c60d1d73d5d1c0e7c8dba17?rik=Ytw5kWIHKGoBag&riu=http%3a%2f%2fwww.moneyprotects.com%2fuploads%2fall%2fRZRZ6ury97xmHpZPe3Pk80wibkJL8MzdbL35urMc.jpg&ehk=80d7VL5TUsse4HBOnh7HJIPvNjNBtkXvecFFp7PJcWI%3d&risl=&pid=ImgRaw&r=0" alt="image" class="w-100 bg-imag"/>
+              </div>
+            </div>
+        </div><br>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-4">
+                    <h3>01-Discover</h3>
+                    <p> We get down with you and learn about what you’re doing now,
+                         what you intend to accomplish in the future, and who your target market is.</p>
+                </div>
+                <div class="col-lg-4 col-md-4">
+                    <h3>02-Define</h3>
+                    <p>Then we characterise the issue so that everyone is on the same page.
+                         We will define a solution and plan it out for you, step by step, depending on the situation.</p>
+                </div>
+                <div class="col-lg-4 col-md-4">
+                    <h3>03-Develop</h3>
+                    <p>Next, we develop a customized solution for you. This could entail creating a wireframe for
+                         your new website or creating a step-by-step strategy for social media promotion</p>
+                </div>
+            </div>
+        </div>
+
         {% endblock %}
                 
 
@@ -391,8 +573,8 @@
             <div class="col-lg-3 col-md-3 mt-3">
                 <h3 class="ms-4" style="color:white;">Explore</h3>
                 <ul>
-                    <li ><a href="{% url 'my_app:home_two' %}">Home</a></li>
-                    <li ><a href="#">About Us</a></li>
+                    <li ><a href="{% url "my_app:home_two" %}">Home</a></li>
+                    <li ><a href="{% url "my_app:about_us" %}">About Us</a></li>
                     <li ><a href="#">Services</a></li>
                     <li ><a href="{% url "my_app:contact" %}">Contact</a></li>
                     <li ><a href="#">Blog</a></li>

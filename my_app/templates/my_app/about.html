@@ -1,0 +1,120 @@
+{% extends "layout.html" %}
+{% load static %}
+{% block title %}About Us{% endblock  %}
+{% block content %}
+<style>
+.about-hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 60px 10%;
+  background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+  color: white;
+  animation: fadeIn 2s ease;
+}
+.hero-text h1 span {
+  color: #f9ca24;
+}
+.hero-image img {
+  width:400px;
+  animation: float 4s ease-in-out infinite;
+}
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
+}
+.mission-section {
+  display: flex;
+  gap: 40px;
+  padding: 60px 10%;
+  background-color: #fff;
+}
+.image img {
+  width:300px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+.stats-counter {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  background-color: #f5f5f5;
+  padding: 40px 0;
+}
+.counter h3 {
+  font-size: 40px;
+  color: #27ae60;
+}
+@media(max-width:768px){
+    .hero-image Img{
+        display:none;
+    }
+    .image img{
+        display:none;
+    }
+}
+
+</style>
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+
+
+<section class="about-hero">
+  <div class="hero-text">
+    <h1>About <span>Neemkaroli Technologies</span></h1>
+    <p>Innovating Digital Growth</p>
+  </div>
+  <div class="hero-image">
+    <img src="https://static.vecteezy.com/system/resources/previews/000/522/943/original/abstract-technology-background-with-the-hi-tech-futuristic-concept-cyber-technology-innovation-background-vector-illustration.jpg" alt="Tech Illustration">
+  </div>
+</section>
+
+<section class="mission-section">
+  <div class="text">
+    <h2>🚀 Our Mission</h2>
+    <p>Empowering brands with data-driven digital strategies that scale and convert.</p>
+  </div>
+  <div class="image">
+    <img src="https://thumbs.dreamstime.com/b/close-up-group-smiling-young-people-showing-their-success-isolated-white-276666185.jpg" alt="Mission Image">
+  </div>
+</section>
+<section class="vision-section">
+    <div class="container" data-aos="fade-up">
+      <h2>🌟 Our Vision</h2>
+      <p>We envision a smarter, connected, digital future where every brand thrives online.</p>
+    </div>
+  </section>
+<section class="stats-counter">
+  <div class="counter">
+    <h3 class="count" data-target="150">0</h3>
+    <p>Clients Served</p>
+  </div>
+  <div class="counter">
+    <h3 class="count" data-target="500">0</h3>
+    <p>Projects Delivered</p>
+  </div>
+</section>
+
+<script>
+const counters = document.querySelectorAll('.count');
+counters.forEach(counter => {
+  counter.innerText = '0';
+  const updateCounter = () => {
+    const target = +counter.getAttribute('data-target');
+    const c = +counter.innerText;
+    const increment = target / 100;
+    if (c < target) {
+      counter.innerText = `${Math.ceil(c + increment)}`;
+      setTimeout(updateCounter, 30);
+    } else {
+      counter.innerText = target;
+    }
+  };
+  updateCounter();
+});
+</script>
+
+{% endblock  %}
