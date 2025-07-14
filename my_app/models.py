@@ -16,6 +16,7 @@ class JobPost(models.Model):
 
     def __str__(self):
         return self.title
+        
 class JobPostForm(models.Model):
     title = models.CharField(max_length=255)
     location = models.CharField(max_length=100)

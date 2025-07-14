@@ -120,45 +120,41 @@
         <p class="text-warning"><b class="text-section">Join Our Team</b><br><span class="text-white"> We are a dynamic and rapidly growing digital marketing agency, committed to delivering cutting-edge solutions for our clients. If you are passionate about digital marketing and eager to make a significant impact in the industry,Neemkaroli Technologies  is the place for you.</span></p>
     </div>    
 </section>
-<div class="career-section">
-  <h2 class="career-title">Apply For Internship</h2>
-
-  <!-- FILTER BUTTONS -->
- <div class="filter-buttons text-center my-4">
-  <a href="{% url 'my_app:career' %}" 
-     class="btn {% if not request.GET.job_type %}btn-dark{% else %}btn-light{% endif %} mx-2">
-     All
-  </a>
-
-  <a href="?job_type=Full Time" 
-     class="btn {% if request.GET.job_type == 'Full Time' %}btn-dark{% else %}btn-light{% endif %} mx-2">
-     Full Time
-  </a>
-
-  <a href="?job_type=Part Time" 
-     class="btn {% if request.GET.job_type == 'Part Time' %}btn-dark{% else %}btn-light{% endif %} mx-2">
-     Part Time
-  </a>
-
-  <a href="?job_type=Internship" 
-     class="btn {% if request.GET.job_type == 'Internship' %}btn-dark{% else %}btn-light{% endif %} mx-2">
-     Internship
-  </a>
+<div class="filter-buttons text-center my-4">
+    <h2>Work With Us</h2>
+  <button class="filter-btn " data-job-type="">All</button>
+  <button class="filter-btn" data-job-type="Full Time">Full Time</button>
+  <button class="filter-btn" data-job-type="Part Time">Part Time</button>
+  <button class="filter-btn" data-job-type="Internship">Internship</button>
 </div>
 
 
-  <!-- JOB LIST -->
-  <div class="job-grid">
-    {% for job in jobs %}
-    <div class="job-card" data-type="{{ job.job_type }}">
-      <div class="job-title">{{ job.title }}</div>
-      <div class="job-type">{{ job.job_type }}</div>
-      <div class="job-location">📍 {{ job.location }}</div>
-      <a href="{% url 'my_app:job_detail' job.id %}" class="view-btn">View Details</a>
-    </div>
-    {% endfor %}
-  </div>
+
+  <div id="job-list" class="job-grid">
+  {% include 'my_app/job_list.html' %}
 </div>
+<script>
+  const buttons = document.querySelectorAll('.filter-btn');
+
+  buttons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const jobType = btn.dataset.jobType;
+
+      buttons.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+
+      fetch(`/app/career/?job_type=${jobType}`, {
+        headers: {
+          'X-Requested-With': 'XMLHttpRequest'
+        }
+      })
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('job-list').innerHTML = data;
+      });
+    });
+  });
+</script>
 
 
 {% endblock  %}

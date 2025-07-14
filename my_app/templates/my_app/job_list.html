@@ -1,0 +1,14 @@
+
+{% block content %}
+{% for job in jobs %}
+  <div class="job-card" data-type="{{ job.job_type }}">
+    <div class="job-title">{{ job.title }}</div>
+    <div class="job-type">{{ job.job_type }}</div>
+    <div class="job-location">📍 {{ job.location }}</div>
+    <a href="{% url 'my_app:job_detail' job.id %}" class="view-btn">View Details</a>
+  </div>
+{% empty %}
+  <p>No jobs available.</p>
+{% endfor %}
+
+{% endblock %}

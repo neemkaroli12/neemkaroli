@@ -35,20 +35,19 @@ def about_us(request):
 def career(request):
     return render(request,'my_app/career.html')
 
+    
 
 def career(request):
-    selected_types = request.GET.getlist('job_type')
-    jobs = JobPost.objects.all().order_by('-posted_on')
+    job_type = request.GET.get('job_type')
+    if job_type:
+        jobs = JobPost.objects.filter(job_type=job_type)
+    else:
+        jobs = JobPost.objects.all()
 
-    if selected_types:
-        jobs = jobs.filter(job_type__in=selected_types)
+    if request.headers.get('x-requested-with') == 'XMLHttpRequest':
+        return render(request, 'my_app/job_list.html', {'jobs': jobs})
 
-    context = {
-        'jobs': jobs,
-        'selected_types': selected_types,
-    }
-    return render(request, 'my_app/career.html', context)
-
+    return render(request, 'my_app/career.html', {'jobs': jobs})
 def job_detail(request, pk):
     job = get_object_or_404(JobPost, pk=pk)
     return render(request, 'my_app/job_detail.html', {'job': job})
