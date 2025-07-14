@@ -7,22 +7,16 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 60px 10%;
+  padding:20px 20px;
   background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
   color: white;
   animation: fadeIn 2s ease;
 }
-.hero-text h1 span {
+.hero-text h1  {
   color: #f9ca24;
+  font-size:60px;
 }
-.hero-image img {
-  width:400px;
-  animation: float 4s ease-in-out infinite;
-}
-@keyframes float {
-  0%, 100% { transform: translateY(0px); }
-  50% { transform: translateY(-20px); }
-}
+
 .mission-section {
   display: flex;
   gap: 40px;
@@ -53,6 +47,12 @@
         display:none;
     }
 }
+@media(max-width:768px){
+  .img img{
+    width:auto;
+    height:200px;
+  }
+}
 
 </style>
 <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
@@ -64,18 +64,41 @@
 
 <section class="about-hero">
   <div class="hero-text">
-    <h1>About <span>Neemkaroli Technologies</span></h1>
-    <p>Innovating Digital Growth</p>
+    <h1 class="text-center">About Us</h1>
+    <p>
+Rooted in the scenic landscapes of Uttarakhand, India, we are a dynamic digital media
+ agency driven by innovation, insight, and imagination. Our talented team affectionately known 
+ as the social bees is composed of seasoned professionals who live and breathe the digital pulse.
+  From the latest updates on Facebook, Twitter, Instagram, and YouTube to shifts in Google’s ever-evolving algorithm, we stay ahead of the curve, adapting instantly to deliver cutting-edge solutions.
+We specialize in crafting cohesive, integrated social media strategies infused with creativity and precision. Drawing on years of hands-on experience, we engineer digital journeys that elevate our clients' online presence and drive meaningful engagement.
+At our core, we think strategically, research thoroughly, and create passionately. For every challenge our clients face, we strive to offer not just solutions but the best, tailored outcomes that resonate and deliver real impact.</p>
   </div>
-  <div class="hero-image">
-    <img src="https://static.vecteezy.com/system/resources/previews/000/522/943/original/abstract-technology-background-with-the-hi-tech-futuristic-concept-cyber-technology-innovation-background-vector-illustration.jpg" alt="Tech Illustration">
-  </div>
+  
+</section>
+<section class="hero-section">
+  <div class="row d-flex me-0 mt-1">
+  <div class="col-lg-5 col-md-5 ms-1 ">
+  <h1>🔍 What<span class="text-warning"> We Do ?<span></h1>
+  <p>We are a vibrant digital media agency with a global footprint, collaborating with clients across India, the U.A.E., Australia, and beyond. Our expertise spans a diverse range of industries including e-commerce, technology, retail, and events, where we seamlessly blend creativity with strategy to craft tailor-made digital experiences.
+Our work speaks for itself:
+From promoting spectacular property expos, cultural festivals like Jim Corbett and Kumaon Hills, to curating campaigns around authentic local cuisine, yoga, and temple tourism. We thrive on bringing brands and experiences to life.
+For e-commerce ventures, we dig deep into business nuances to deliver performance-driven digital solutions that spark engagement and boost visibility.
+Our commitment to innovation has earned us recognition, including the prestigious ‘Best Digital Innovation’ Award in Uttarakhand a testament to our passion and impact in the digital sphere.
+We don’t just market. We celebrate, elevate, and amplify. And our clients below are living proof.</p>
+</div>
+<div class="col-lg-6 col-md-6 img">
+  <img src="https://cssanimation.io/blog/wp-content/uploads/2023/09/Teamwork-And-Collaboration-How-To-Improve-Both-At-Work-1.jpg"alt="image" width="auto" height="400px">
+</div>
+</div>
+
 </section>
 
 <section class="mission-section">
   <div class="text">
-    <h2>🚀 Our Mission</h2>
-    <p>Empowering brands with data-driven digital strategies that scale and convert.</p>
+    <h2 class="text-warning">🚀 Our Mission</h2>
+    <p>Empowering brands with data-driven digital strategies that scale and convert.
+      We live and breathe digital. The Internet is our home.
+    </p>
   </div>
   <div class="image">
     <img src="https://thumbs.dreamstime.com/b/close-up-group-smiling-young-people-showing-their-success-isolated-white-276666185.jpg" alt="Mission Image">
@@ -83,7 +106,7 @@
 </section>
 <section class="vision-section">
     <div class="container" data-aos="fade-up">
-      <h2>🌟 Our Vision</h2>
+      <h2 class="text-warning">🌟 Our Vision</h2>
       <p>We envision a smarter, connected, digital future where every brand thrives online.</p>
     </div>
   </section>

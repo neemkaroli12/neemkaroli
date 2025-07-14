@@ -35,7 +35,6 @@ def about_us(request):
 def career(request):
     return render(request,'my_app/career.html')
 
-    
 
 def career(request):
     job_type = request.GET.get('job_type')
