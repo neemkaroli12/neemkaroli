@@ -1,0 +1,164 @@
+{% extends "layout.html" %}
+{% load static %}
+{% block title %}Career{% endblock  %}
+{% block content%}
+<style>
+    .my-section{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 60px 10%;
+        background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+        color: white;
+    }
+    .text-section{
+        font-size:30px;
+    }
+
+.career-section {
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 30px;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.career-title {
+    text-align: center;
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 40px;
+    color: #333;
+}
+
+.job-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+}
+
+.job-card {
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 25px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.job-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+.job-title {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: #222;
+}
+
+.job-type {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 15px;
+    font-style: italic;
+}
+
+.job-location {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.view-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: background 0.3s ease;
+}
+
+.view-btn:hover {
+    background-color: #0056b3;
+}
+
+@media (max-width: 768px) {
+    .career-title {
+        font-size: 28px;
+    }
+}
+.filter-buttons {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.filter-btn {
+    display: inline-block;
+    background-color: #f1f1f1;
+    color: #333;
+    padding: 10px 20px;
+    margin: 5px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: background 0.3s ease;
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+    background-color: #007bff;
+    color: white;
+}
+
+
+</style>
+<section class="my-section">
+    <div class="col-lg-12">
+        <p class="text-warning"><b class="text-section">Join Our Team</b><br><span class="text-white"> We are a dynamic and rapidly growing digital marketing agency, committed to delivering cutting-edge solutions for our clients. If you are passionate about digital marketing and eager to make a significant impact in the industry,Neemkaroli Technologies  is the place for you.</span></p>
+    </div>    
+</section>
+<div class="career-section">
+  <h2 class="career-title">Apply For Internship</h2>
+
+  <!-- FILTER BUTTONS -->
+ <div class="filter-buttons text-center my-4">
+  <a href="{% url 'my_app:career' %}" 
+     class="btn {% if not request.GET.job_type %}btn-dark{% else %}btn-light{% endif %} mx-2">
+     All
+  </a>
+
+  <a href="?job_type=Full Time" 
+     class="btn {% if request.GET.job_type == 'Full Time' %}btn-dark{% else %}btn-light{% endif %} mx-2">
+     Full Time
+  </a>
+
+  <a href="?job_type=Part Time" 
+     class="btn {% if request.GET.job_type == 'Part Time' %}btn-dark{% else %}btn-light{% endif %} mx-2">
+     Part Time
+  </a>
+
+  <a href="?job_type=Internship" 
+     class="btn {% if request.GET.job_type == 'Internship' %}btn-dark{% else %}btn-light{% endif %} mx-2">
+     Internship
+  </a>
+</div>
+
+
+  <!-- JOB LIST -->
+  <div class="job-grid">
+    {% for job in jobs %}
+    <div class="job-card" data-type="{{ job.job_type }}">
+      <div class="job-title">{{ job.title }}</div>
+      <div class="job-type">{{ job.job_type }}</div>
+      <div class="job-location">📍 {{ job.location }}</div>
+      <a href="{% url 'my_app:job_detail' job.id %}" class="view-btn">View Details</a>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+
+
+{% endblock  %}

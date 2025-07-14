@@ -15,5 +15,11 @@ urlpatterns = [
         path('content/',views.content,name='content'),
         path('pay/',views.pay,name='pay'),
         path('gmb/',views.gmb,name='gmb'),
-        path('about/',views.about_us,name='about_us')
+        path('about/',views.about_us,name='about_us'),
+        path('career/',views.career,name='career'),
+        path('job/<int:pk>/', views.job_detail, name='job_detail'),
+        path('career/add/', views.add_job, name='add_job'),
+        path('delete/<int:job_id>/', views.delete_job, name='delete_job'),
+
+
 ]
