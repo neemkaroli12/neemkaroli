@@ -1,9 +1,36 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, get_object_or_404, redirect
 from .forms import ContactForm
 from .models import JobPost ,JobPostForm
+from django.core.mail import send_mail
+from django.contrib import messages
+from django.conf import settings
+from django.urls import reverse
 
 def contact(request):
-    form = ContactForm()
+    if request.method == 'POST':
+        form = ContactForm(request.POST)
+        if form.is_valid():
+            data = form.cleaned_data
+
+            send_mail(
+                subject="New Contact Submission",
+                message=f"""
+Name: {data['name']}
+Email: {data['email']}
+Phone: {data['phone']}
+Designation: {data['designation']}
+Message: {data['message']}
+""",
+                from_email=settings.EMAIL_HOST_USER,
+                recipient_list=['ashadevi67531@gmail.com'],
+            )
+
+            messages.success(request, "Your message has been sent successfully!")
+
+            return redirect(reverse('my_app:contact'))
+    else:
+        form = ContactForm()
+
     return render(request, 'my_app/contact.html', {'myData': form})
 
 
