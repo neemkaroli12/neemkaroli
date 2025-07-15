@@ -93,5 +93,7 @@ def add_job(request):
 def delete_job(request, job_id):
     return render(request,'my_app/career.html')
 
+def creative(request):
+    return render(request,'my_app/creative.html')
 
 
