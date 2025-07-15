@@ -20,6 +20,7 @@ urlpatterns = [
         path('job/<int:pk>/', views.job_detail, name='job_detail'),
         path('career/add/', views.add_job, name='add_job'),
         path('delete/<int:job_id>/', views.delete_job, name='delete_job'),
-        path('crative',views.creative,name="creative"),
+        path('creative/',views.creative,name="creative"),
+        path('b2b/',views.b2b,name="b2b"),
 
 ]

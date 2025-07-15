@@ -96,4 +96,7 @@ def delete_job(request, job_id):
 def creative(request):
     return render(request,'my_app/creative.html')
 
+def b2b(request):
+    return render(request,'my_app/b2b.html')
+
 
