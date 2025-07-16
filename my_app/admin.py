@@ -1,8 +1,7 @@
 from django.contrib import admin
 from .models import JobPost
 
+# admin.py में ये confirm करें:
 @admin.register(JobPost)
 class JobPostAdmin(admin.ModelAdmin):
-    list_display = ('title', 'location', 'job_type', 'posted_on')
-    search_fields = ('title', 'location')
-    list_filter = ('job_type', 'posted_on')
+    list_display = ('title', 'job_type', 'location', 'salary')  # salary add करें

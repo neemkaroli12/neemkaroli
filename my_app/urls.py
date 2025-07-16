@@ -22,5 +22,7 @@ urlpatterns = [
         path('delete/<int:job_id>/', views.delete_job, name='delete_job'),
         path('creative/',views.creative,name="creative"),
         path('b2b/',views.b2b,name="b2b"),
+        path('apply/<int:job_id>/', views.apply_job, name='apply_job'),
+
 
 ]

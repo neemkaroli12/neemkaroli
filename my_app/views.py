@@ -5,6 +5,11 @@ from django.core.mail import send_mail
 from django.contrib import messages
 from django.conf import settings
 from django.urls import reverse
+from django.core.files.storage import FileSystemStorage
+from django.views.decorators.csrf import csrf_exempt
+from django.http import JsonResponse
+from django.core.mail import EmailMessage
+
 
 def contact(request):
     if request.method == 'POST':
@@ -21,7 +26,7 @@ Phone: {data['phone']}
 Designation: {data['designation']}
 Message: {data['message']}
 """,
-                from_email=settings.EMAIL_HOST_USER,
+                from_email="Neemkaroli Technologies <sales@neemkarolitechnologies.com>",
                 recipient_list=['sales@neemkarolitechnologies.com'],
             )
 
@@ -99,4 +104,28 @@ def creative(request):
 def b2b(request):
     return render(request,'my_app/b2b.html')
 
+def apply_job(request, job_id):
+    if request.method == 'POST':
+        name = request.POST.get('name')
+        email = request.POST.get('email')
+        cv = request.FILES.get('cv')
+
+        subject = f"New Job Application for Job ID: {job_id}"
+        message = f"Name: {name}\nEmail: {email}\nJob ID: {job_id}"
+
+        mail = EmailMessage(
+            subject,
+            message,
+            'sales@neemkarolitechnologies.com',  # From
+            ['sales@neemkarolitechnologies.com'],  # To
+        )
+
+        if cv:
+            mail.attach(cv.name, cv.read(), cv.content_type)
+
+        mail.send()
+
+        if request.headers.get('x-requested-with') == 'XMLHttpRequest':
+            return JsonResponse({'status': 'sent'})
+        return redirect('my_app:job_detail', pk=job_id)
 

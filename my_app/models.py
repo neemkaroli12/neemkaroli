@@ -11,6 +11,7 @@ class JobPost(models.Model):
     location = models.CharField(max_length=100)
     experience = models.CharField(max_length=50)
     job_type = models.CharField(max_length=20, choices=JOB_TYPE_CHOICES)
+    salary = models.CharField(max_length=100, blank=True, null=True)
     description = models.TextField()
     posted_on = models.DateField(auto_now_add=True)
 

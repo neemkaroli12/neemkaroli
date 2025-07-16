@@ -25,8 +25,12 @@
     color: #666;
     margin-bottom: 20px;
     line-height: 1.8;
-}
+    
 
+}
+.job-meta strong {
+    color: #444;
+}
 .job-description {
     font-size: 18px;
     line-height: 1.6;
@@ -79,10 +83,11 @@
     <h1 class="job-title">{{ job.title }}</h1>
     
     <div class="job-meta">
-        <strong>Location:</strong> {{ job.location }} <br>
-        <strong>Type:</strong> {{ job.job_type }} <br>
-        <strong>Salary Range:</strong> {{ job.salary_range }}
-    </div>
+    <strong>Location:</strong> {{ job.location }} <br>
+    <strong>Type:</strong> {{ job.job_type }} <br>
+    <strong>Salary:</strong> {{ job.salary|default:"Not disclosed" }}
+</div>
+
 
     <div class="job-tags">
         <span>{{ job.experience_level }}</span>
@@ -94,7 +99,44 @@
         {{ job.description|linebreaks }}
     </div>
 
-    <a href="{% url 'my_app:contact' %}" class="apply-btn">Apply Now</a>
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#applyModal">
+  Apply Now
+</button>
+
 </div>
+
+<!-- Modal -->
+<div class="modal fade" id="applyModal" tabindex="-1" aria-labelledby="applyModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered"> <!-- center modal -->
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="applyModalLabel">Apply for Job</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+
+      <div class="modal-body">
+        <!-- Your Form Inside Modal -->
+        <form id="applyForm" method="post" enctype="multipart/form-data"
+              action="{% url 'my_app:apply_job' job.id %}">
+          {% csrf_token %}
+          <div class="mb-3">
+              <label for="name" class="form-label">Your Name</label>
+              <input type="text" name="name" class="form-control" required>
+          </div>
+          <div class="mb-3">
+              <label for="email" class="form-label">Your Email</label>
+              <input type="email" name="email" class="form-control" required>
+          </div>
+          <div class="mb-3">
+              <label for="cv" class="form-label">Upload CV</label>
+              <input type="file" name="cv" class="form-control" required>
+          </div>
+          <button type="submit" class="btn btn-primary">Submit Application</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
 
 {% endblock %}
