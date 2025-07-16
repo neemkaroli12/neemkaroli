@@ -4,6 +4,7 @@ JOB_TYPE_CHOICES = (
     ('Full Time', 'Full Time'),
     ('Part Time', 'Part Time'),
     ('Internship', 'Internship'),
+    ('hybrid','hybrid'),
 )
 
 class JobPost(models.Model):
