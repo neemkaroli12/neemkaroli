@@ -83,6 +83,7 @@
     <h1 class="job-title">{{ job.title }}</h1>
     
     <div class="job-meta">
+    <strong>Ref No:</strong> {{ job.reference_number }} <br>
     <strong>Location:</strong> {{ job.location }} <br>
     <strong>Type:</strong> {{ job.job_type }} <br>
     <strong>Salary:</strong> {{ job.salary|default:"Not disclosed" }}
@@ -131,6 +132,11 @@
               <label for="cv" class="form-label">Upload CV</label>
               <input type="file" name="cv" class="form-control" required>
           </div>
+          <div class="mb-3">
+          <label for="textarea" class="form-label">Message</label>
+          <textarea name="textarea" class="form-control" rows="4" required></textarea>
+          </div>
+
           <button type="submit" class="btn btn-primary">Submit Application</button>
         </form>
       </div>

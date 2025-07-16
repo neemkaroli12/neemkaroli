@@ -1,5 +1,6 @@
 from django.db import models
 
+
 JOB_TYPE_CHOICES = (
     ('Full Time', 'Full Time'),
     ('Part Time', 'Part Time'),
@@ -15,6 +16,8 @@ class JobPost(models.Model):
     salary = models.CharField(max_length=100, blank=True, null=True)
     description = models.TextField()
     posted_on = models.DateField(auto_now_add=True)
+    reference_number = models.CharField(max_length=100, unique=True, null=True, blank=True)
+
 
     def __str__(self):
         return self.title

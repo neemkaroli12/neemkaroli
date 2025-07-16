@@ -11,6 +11,7 @@ from django.http import JsonResponse
 from django.core.mail import EmailMessage
 
 
+
 def contact(request):
     if request.method == 'POST':
         form = ContactForm(request.POST)
@@ -105,19 +106,23 @@ def b2b(request):
     return render(request,'my_app/b2b.html')
 
 def apply_job(request, job_id):
+    job = get_object_or_404(JobPost, id=job_id)
+    reference = job.reference_number if job.reference_number else "N/A"
+
     if request.method == 'POST':
         name = request.POST.get('name')
         email = request.POST.get('email')
+        message = request.POST.get('textarea')
         cv = request.FILES.get('cv')
 
-        subject = f"New Job Application for Job ID: {job_id}"
-        message = f"Name: {name}\nEmail: {email}\nJob ID: {job_id}"
+        subject = f"Ref No: {reference} |{job_id}"
+        message = f"Name: {name}\nEmail: {email}\nReference Number: {reference}\nMessage: {message}"
 
         mail = EmailMessage(
             subject,
             message,
-            'sales@neemkarolitechnologies.com',  # From
-            ['sales@neemkarolitechnologies.com'],  # To
+            'sales@neemkarolitechnologies.com',
+            ['sales@neemkarolitechnologies.com'],
         )
 
         if cv:
