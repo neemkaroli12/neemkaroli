@@ -140,8 +140,8 @@ if not DEBUG:
     django_heroku.settings(locals())
 
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST = 'smtp.zoho.in'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
-EMAIL_HOST_USER = 'ashadevi67531@gmail.com'
-EMAIL_HOST_PASSWORD = 'xvtt ncmn aqqj whqe'
+EMAIL_HOST_USER = 'sales@neemkarolitechnologies.com'     # your new Zoho Mail ID
+EMAIL_HOST_PASSWORD = 'Pass@ntech&123'     # the password you just created

@@ -22,7 +22,7 @@ Designation: {data['designation']}
 Message: {data['message']}
 """,
                 from_email=settings.EMAIL_HOST_USER,
-                recipient_list=['ashadevi67531@gmail.com'],
+                recipient_list=['sales@neemkarolitechnologies.com'],
             )
 
             messages.success(request, "Your message has been sent successfully!")
