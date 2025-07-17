@@ -23,6 +23,6 @@ urlpatterns = [
         path('creative/',views.creative,name="creative"),
         path('b2b/',views.b2b,name="b2b"),
         path('apply/<int:job_id>/', views.apply_job, name='apply_job'),
-
+        path('web_design',views.web_design,name='web_design'),
 
 ]

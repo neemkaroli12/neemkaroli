@@ -1,0 +1,76 @@
+{% extends "layout.html" %}
+{% load static %}
+{% block title %}Web Design{% endblock  %}
+{% block content %}
+<style>
+.main-section{
+    background-color:#4C6CE4;
+    height:500px;
+}
+.content-section{
+    background: #eee9e7ff;
+    height:100%;
+    width:100%;
+    clip-path: ellipse(75% 100% at 50% 100%);
+    margin-top:-50px;
+}
+@media(max-width:768px){
+    .photo-section{
+        display:none;
+    }
+    .content-section{
+        margin-top:10px;
+    }
+}
+
+
+
+</style>
+<section>
+<div class="container-fluid main-section">
+    <div class="row">
+    <div class="text-section col-lg-7 mt-5">
+        <h1 class="text-white ms-3">Our Web Design Portfolio</h1>
+        <p class="ms-3"><b>here is a Quick Overview of Our<br> Recent Work</b></p>
+        <p class="ms-3 text-white">Neemkarolitechnologies has completed more than 150 Projects and worked with more than 90 satisfied clients. </p>
+    </div>
+    <div class="photo-section col-lg-5 mt-5">
+        <img src="https://digiphlox.com/wp-content/uploads/2022/12/Portfolio-Png.png" height="300" width="500">
+    </div>
+</div>
+<div class="row">
+<div class="content-section ">
+    <div class="card-sec d-flex justify-content-center">
+    <div class="card ms-5 mt-5" style="width: 18rem; height:12rem;">
+  <img src="https://static.vecteezy.com/system/resources/previews/000/457/141/original/landing-page-template-of-website-design-illustration-concept-isometric-flat-design-concept-of-web-page-design-for-website-and-mobile-website-vector-illustration.jpg" class="card-img-top" alt="..." height="200">
+</div>
+<div class="card ms-5 mt-5 " style="width: 20rem; height:13rem;">
+  <img src="https://th.bing.com/th/id/R.840bfdc8fd45391a2fa1524d58e31a76?rik=jKVG2pSNsTX0Ow&riu=http%3a%2f%2fprodesignminds.com%2fimages%2fbanner-right-side-image.webp&ehk=%2bdBJttXujQLZnXaVXDtqB2s1KEeecIvY40uVLV8MbU4%3d&risl=&pid=ImgRaw&r=0" class="card-img-top" alt="..." height="200">
+  
+</div>
+<div class="card ms-5 mt-5" style="width: 20rem; height:13rem;">
+  <img src="https://img.freepik.com/premium-psd/nonprofit-donation-website-landing-page_785169-103.jpg" class="card-img-top" alt="..." height="200">
+</div>
+</div>
+<div class="card-sec2 d-flex justify-content-center">
+    <div class="card ms-5 mt-5 " style="width: 20rem; height:13rem;">
+  <img src="https://cdn.dribbble.com/users/5558527/screenshots/17736679/app-landing-page-preview_4x.jpg" class="card-img-top" alt="..." height="200">
+</div>
+<div class="card ms-5 mt-5" style="width: 20rem; height:13rem;">
+  <img src="https://cdn.prod.website-files.com/5e593fb060cf877cf875dd1f/63ff7563d08ed675332b5ecd_heyboardimage5.jpeg" class="card-img-top" alt="..." height="200">
+</div>
+<div class="card ms-5 mt-5" style="width: 18rem; height:12rem;">
+  <img src="https://mir-s3-cdn-cf.behance.net/projects/max_808/db5632203308611.Y3JvcCwyNDI0LDE4OTYsMCww.jpg" class="card-img-top" alt="..." height="200">
+</div>
+
+</div>
+</div>
+</div>
+</div>
+</section><br><br><br><br><br><br><br><br><br><br><br>
+
+
+
+ 
+
+{% endblock  %}

@@ -134,3 +134,6 @@ def apply_job(request, job_id):
             return JsonResponse({'status': 'sent'})
         return redirect('my_app:job_detail', pk=job_id)
 
+def web_design(request):
+    return render(request,'my_app/web_design.html')
+
