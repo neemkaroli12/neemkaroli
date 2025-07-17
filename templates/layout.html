@@ -246,6 +246,144 @@
         display:none;
     }
 }
+.service-card {
+  background: linear-gradient(to bottom, #e1f7fa, #ffffff);
+  border-radius: 15px;
+  padding: 15px;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+}
+
+.service-image {
+  width: 100%;
+  height: 160px;
+  object-fit: contain;  
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+
+.service-text-area {
+  height: 200px;
+  overflow: hidden;
+  margin-top: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.service-title {
+  color: #f9ca24;
+  font-weight: bold;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.service-content {
+  font-size: 15px;
+  color: #444;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  margin-bottom: 10px;
+}
+
+.service-button {
+  background-color: #17C3B2;
+  border: none;
+  padding: 8px 18px;
+  font-weight: bold;
+  color: white;
+  border-radius: 5px;
+  transition: 0.3s ease;
+  text-decoration: none;
+}
+
+.service-button:hover {
+  background-color: #12a79b;
+  transform: scale(1.05);
+}
+
+
+
+
+/* Default Styling (Optional Cleanup) */
+.bg-imag {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+.card{
+  box-shadow:10px 7px 10px skyblue;
+}
+
+/* Text block spacing */
+.container-fluid h3 {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.container-fluid p {
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 992px) {
+  .ms-5 {
+    margin-left: 1rem !important;
+  }
+}
+
+@media (max-width: 768px) {
+  /* Stack introduction & image */
+  .intro-section .row,
+  .image-section .row,
+  .steps-section .row {
+    flex-direction: column;
+  }
+
+  .col-md-4,
+  .col-md-8,
+  .col-md-9 {
+    width: 100%;
+    margin-bottom: 20px;
+    padding-left: 10px;
+    padding-right: 15px;
+  }
+  .image-section{
+    width:80% !important;
+  }
+
+  .container-fluid h3 {
+    font-size: 20px;
+  }
+
+  .container-fluid h4 {
+    font-size: 18px;
+  }
+
+  .container-fluid p {
+    font-size: 14px;
+  }
+
+}
+.image-section{
+    margin-left:50px !important;
+}
+
 
 
   </style>
@@ -355,18 +493,20 @@
     </section>
     
     {% block content %}
-            <div class="row align-items-center me-0 bg-img">
+<link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+<div class="row align-items-center me-0 bg-img">
   <div class="col-lg-7 col-md-7" style="border-radius: 10px;">
-    <h3 class="text-dark ms-3 animated-text">
+    <h3 class="text-dark ms-5 animated-text">
       <span>Unlock</span> <span>Growth</span> <span>Potential</span>
       <span>with</span> <span>Free</span> <span>Consulting</span>
       <span>from</span> <span>Industry</span> <span>Experts!</span>
     </h3>
-    <h5 class="ms-3 text-success subheading-animate">
+    <h5 class="ms-5 text-success subheading-animate">
       Struggling to Grow or Just Starting Out? We’re Your Business Partner<br>
       for Rapid Growth in India and Beyond.
     </h5>
-    <p class="text-dark mt-4 ms-3 para-animate" style="font-size: 18px;">
+    <p class="text-dark mt-4 ms-5 para-animate" style="font-size: 18px;">
       We offer end-to-end marketing and business strategy solutions through strong
       social media presence, serving clients across India and globally<br> (including the Middle East (Dubai),
       Australia, Canada, Singapore, Africa, and more).
@@ -376,11 +516,10 @@
     <img src="{% static 'image/expressive-young-lady-posing-studio-removebg-preview.png' %}"
          alt="Big Image"
          class="img-fluid w-100 animated-image"
-         style="max-height: 500px; object-fit: cover;">
+         style="max-height: 600px; object-fit: cover;">
   </div>
 </div><br><br>
-
-        <div class="container">
+<div class="container">
         <div class="slider-wrapper col-lg-12 col-md-12  me-0">
   
          <button class="nav-button prev-btn" onclick="prevSlide()">&#10094;</button>
@@ -402,125 +541,132 @@
        </div>
        </div><br><br><br>
         
-        <div class="container-fluid mt-3" style="box-shadow:10px 7px 20px #17C3B2;">
-            <div class="row col-lg-12 col-md-12 me-0">
-                <h3 class="text-center mt-3" style="color:#17C3B2;">Our Digital Marketing Expertise<br>Our Marketing services
-                is what you need</h3>
-            </div>
-            <div class="row row-cols-1 row-cols-md-3 g-4 mt-4 me-0 ">
-                <div class="col">
-                    <div class="card">
-                        <img src="{% static 'images/10946070.jpg' %}" class="card-img-top" alt="..." height="380">
-                        <div class="card-body">
-                            <h5 class="card-title text-center"><b>SEO</b></h5>
-                            <p class="card-text text-center">
-                               Professional SEO Services to Grow Your Business
-                               We help your website rank higher on search engines with 
-                               smart SEO strategies, including keyword research, 
-                               content optimization, and technical improvements.
+        
+<div class="container mt-5 card-section">
+  <div class="text-center mb-5">
+    <h3 style="color:#17C3B2;">Our Digital Marketing Expertise</h3>
+    <p class="lead" style="color:#17C3B2;">Our marketing services are exactly what your business needs</p>
+  </div>
 
-                            </p>
-                            <a href="{% url "my_app:about"%}"><button type="button" class="btn btn-info w-100"><b>Show More</b></button></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="card">
-                        <img src="{% static 'images/4421964.jpg' %}" class="card-img-top" alt="..." height="380" width="400">
-                        <div class="card-body">
-                            <h5 class="card-title text-center"><b >Website Development</b></h5>
-                            <p class="card-text">
-                                Custom Website Development for Your Business
-                                We build responsive, user-friendly,
-                                and visually appealing websites tailored <br> to your business needs....
-                                
-
-
-                            </p>
-                            <a href="{% url "my_app:web" %}"><button type="button" class="btn btn-info w-100"><b>Show More</b></button></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="card">
-                        <img src="https://media.istockphoto.com/id/1305410300/vector/social-influence-marketing-concept.jpg?s=612x612&w=0&k=20&c=T5H0S0MfufBEVoHU-_DGV2DEbct9cqx3ANL5jN1DG20=" class="card-img-top" alt="..." height="380">
-                        <div class="card-body">
-                            <h5 class="card-title text-center"><b>Social Media Marketing</b></h5>
-                            <p class="card-text">Social Media Marketing That Delivers
-                                    We create and manage engaging social media content
-                                    to grow your brand, reach more people, 
-                                    and drive real results across all major platforms.
-
-                            </p>
-                            <a href="{% url "my_app:media" %}"><button type="button" class="btn btn-info w-100"><b>Show More</b></button></a>
-                        </div>
-                    </div>
-                </div>
-    <div class="col">
-                    <div class="card">
-                        <img src="{% static 'images/4266807.jpg' %}" class="card-img-top" alt="..." height="380">
-                        <div class="card-body">
-                        <h5 class="card-title text-center"><b>Google My Busniess Listing</b></h5>
-                        <p class="card-text">Get Discovered with Google My Business Listing
-                            We help your business show up on Google Search 
-                            and Maps by setting up and optimizing your Google My Business profile.
-                            From accurate information to reviews and photos.
-
-</p>
-                        <a href="{% url "my_app:gmb" %}"><button type="button" class="btn btn-info w-100"><b>Show More</b></button></a>
-                        </div>
-                    </div>
-                </div>
-            <div class="col">
-                    <div class="card">
-                        <img src="{% static 'images/3355.jpg'%}" class="card-img-top" alt="..." height="400">
-                        <div class="card-body">
-                        <h5 class="card-title text-center"><b>Pay Per Click-PPC</b></h5>
-                        <p class="card-text">Results-Driven PPC Services
-                        We run targeted PPC ads to help you reach the right audience,
-                         get more leads, and grow your business—fast and within budget.</p>
-                         <a href="{% url "my_app:pay" %}"><button type="button" class="btn btn-info w-100"><b>Show More</b></button></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col"> 
-                    <div class="card">
-                        <img src="{% static 'images/10793.jpg' %}" class="card-img-top" alt="..." height="420">
-                        <div class="card-body">
-                        <h5 class="card-title text-center"><b>Content Writing</b></h5>
-                        <p class="card-text">Engaging Content That Connects and Converts
-                        We provide high-quality content writing services tailored 
-                        to your brand voice and audience. 
-
-                     </p>
-                        <a href="{% url "my_app:content" %}"><button type="button" class="btn btn-info w-100"><b>Show More</b></button></a>
-                        </div>
-                    </div>
-                </div>
+  <div class="row">
+    <!-- SEO -->
+    <div class="col-md-4 mb-4">
+      <div class="card h-100 text-center">
+        <img src="{% static 'images/10946070-removebg-preview.png' %}" class="card-img-top img-fluid" style="height:180px; object-fit:contain;" alt="SEO">
+        <div class="card-body">
+          <h5 class="card-title fw-bold">SEO</h5>
+          <p class="card-text">
+            Professional SEO Services to grow your business with keyword research, content optimization & technical SEO.
+          </p>
         </div>
-    </div><br><br>
-
-    
-       <div class="container-fluid">
-            <div class="row">
-                <div class="col-lg-8 col-md-8">
-                   <h3><b class="text-info intro">Introducing Our Work</b></h3>
-                   <h4><b class="justify-content-center "> Allow us to assist you in outperforming your competitors.</b></h4>
-                   <p>We deliver to the SEO and web design profession new thinking, flexible approach, solid ethics, and years of experience. As the best digital marketing agency in Haldwani, we prioritise learning about our clients’ company objectives. Following that, all decisions are made with those objectives in mind.</p>
-                </div>
-            </div>
+        <div class="card-footer bg-white border-0">
+          <a href="{% url 'my_app:about' %}" class="btn btn-info text-white fw-bold">Show More</a>
         </div>
-        <div class="container">
+      </div>
+    </div>
+
+    <!-- Website Development -->
+    <div class="col-md-4 mb-4">
+      <div class="card h-100 text-center">
+        <img src="{% static 'images/4421964.jpg' %}" class="card-img-top img-fluid" style="height:180px; object-fit:contain;" alt="Web Dev">
+        <div class="card-body">
+          <h5 class="card-title fw-bold">Website Development</h5>
+          <p class="card-text">
+            Custom website development tailored to your business goals—responsive, modern, and SEO-friendly.
+          </p>
+        </div>
+        <div class="card-footer bg-white border-0">
+          <a href="{% url 'my_app:web' %}" class="btn btn-info text-white fw-bold">Show More</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Social Media Marketing -->
+    <div class="col-md-4 mb-4">
+      <div class="card h-100 text-center">
+        <img src="https://1.bp.blogspot.com/-KpUKTgtPeBQ/X3Ridg9YYnI/AAAAAAAACMg/wef9wBdD23Iz5vlWOm-OQUEEDvcd-4BQgCLcBGAsYHQ/s2048/social-media-marketing-background-images-7.png" class="card-img-top img-fluid" style="height:180px; object-fit:contain;" alt="SMM">
+        <div class="card-body">
+          <h5 class="card-title fw-bold">Social Media Marketing</h5>
+          <p class="card-text">
+            We create and manage engaging social media content that builds your brand and grows your audience.
+          </p>
+        </div>
+        <div class="card-footer bg-white border-0">
+          <a href="{% url 'my_app:media' %}" class="btn btn-info text-white fw-bold">Show More</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- GMB -->
+    <div class="col-md-4 mb-4">
+      <div class="card h-100 text-center">
+        <img src="{% static 'images/4266807-removebg-preview.png' %}" class="card-img-top img-fluid" style="height:180px; object-fit:contain;" alt="GMB">
+        <div class="card-body">
+          <h5 class="card-title fw-bold">Google My Business</h5>
+          <p class="card-text">
+            We help your business appear on Google Search & Maps with complete GMB optimization and updates.
+          </p>
+        </div>
+        <div class="card-footer bg-white border-0">
+          <a href="{% url 'my_app:gmb' %}" class="btn btn-info text-white fw-bold">Show More</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- PPC -->
+    <div class="col-md-4 mb-4">
+      <div class="card h-100 text-center">
+        <img src="{% static 'images/3355-removebg-preview.png' %}" class="card-img-top img-fluid" style="height:180px; object-fit:contain;" alt="PPC">
+        <div class="card-body">
+          <h5 class="card-title fw-bold">Pay Per Click - PPC</h5>
+          <p class="card-text">
+            Targeted Google Ads and PPC strategies to generate high-quality leads and maximize your ROI.
+          </p>
+        </div>
+        <div class="card-footer bg-white border-0">
+          <a href="{% url 'my_app:pay' %}" class="btn btn-info text-white fw-bold">Show More</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Content Writing -->
+    <div class="col-md-4 mb-4">
+      <div class="card h-100 text-center">
+        <img src="{% static 'images/10793.jpg' %}" class="card-img-top img-fluid" style="height:180px; object-fit:contain;" alt="Content Writing">
+        <div class="card-body">
+          <h5 class="card-title fw-bold">Content Writing</h5>
+          <p class="card-text">
+            High-quality content writing that matches your brand voice and drives conversions across all platforms.
+          </p>
+        </div>
+        <div class="card-footer bg-white border-0">
+          <a href="{% url 'my_app:content' %}" class="btn btn-info text-white fw-bold">Show More</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+       <div class="container-fluid intro-section">
             <div class="row me-0">
-              <div class="col-lg-10 col-md-10">
+                <div class="col-lg-8 col-md-8 ">
+                   <h3><b class="text-info intro ms-5">Introducing Our Work</b></h3>
+                   <h4><b class="justify-content-center ms-5"> Allow us to assist you in outperforming your competitors.</b></h4>
+                   <p class="ms-5">We deliver to the SEO and web design profession new thinking, flexible approach, solid ethics, and years of experience. As the best digital marketing agency in Haldwani, we prioritise learning about our clients’ company objectives. Following that, all decisions are made with those objectives in mind.</p>
+                </div>
+            </div>
+        </div>
+        <div class="container image-section">
+            <div class="row me-0">
+              <div class="col-lg-12 col-md-12 p-0">
                 <img src="https://th.bing.com/th/id/R.85099afb5c60d1d73d5d1c0e7c8dba17?rik=Ytw5kWIHKGoBag&riu=http%3a%2f%2fwww.moneyprotects.com%2fuploads%2fall%2fRZRZ6ury97xmHpZPe3Pk80wibkJL8MzdbL35urMc.jpg&ehk=80d7VL5TUsse4HBOnh7HJIPvNjNBtkXvecFFp7PJcWI%3d&risl=&pid=ImgRaw&r=0" alt="image" class="w-100 bg-imag"/>
               </div>
             </div>
         </div><br>
 
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-4 col-md-4">
+        <div class="container-fluid">
+            <div class="row ms-5 me-0">
+                <div class="col-lg-4 col-md-4 steps-section">
                     <h3>01-Discover</h3>
                     <p> We get down with you and learn about what you’re doing now,
                          what you intend to accomplish in the future, and who your target market is.</p>
@@ -538,6 +684,8 @@
             </div>
         </div>
 
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>AOS.init();</script>
         {% endblock %}
 <footer>
     <div class="container-fluid mt-5" height="200" width="300">

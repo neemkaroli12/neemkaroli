@@ -14,15 +14,43 @@
 }
 .hero-text h1  {
   color: #f9ca24;
-  font-size:60px;
+  font-size:50px;
 }
 
 .mission-section {
-  display: flex;
-  gap: 40px;
-  padding: 60px 10%;
-  background-color: #fff;
+  padding: 40px 20px;
+  background-color: #f8f9fa;
 }
+
+.mission-section h2 {
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.mission-section p {
+  font-size: 16px;
+}
+
+.mission-section .image img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .mission-section .row {
+    flex-direction: column;
+  }
+
+  .mission-section .text {
+    text-align: center !important;
+  }
+
+  .mission-section .image {
+    margin-bottom: 20px;
+  }
+}
+
 .image img {
   width:300px;
   border-radius: 10px;
@@ -53,6 +81,58 @@
     height:200px;
   }
 }
+.hero-section {
+  padding: 5px;
+}
+
+.hero-section .row {
+  margin: 0;
+}
+
+.hero-section img {
+  width:500px;
+  height:400px ;
+  display: block;
+}
+
+/* Responsive Design for Tablets and Mobiles */
+@media (max-width: 768px) {
+  .hero-section .row {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero-section .col-lg-6,
+  .hero-section .col-md-6,
+  .hero-section .col-lg-3,
+  .hero-section .col-md-3 {
+    width: 100%;
+    margin: 0 !important;
+    padding: 10px;
+    justify-content:center;
+  }
+
+  .hero-section h1 {
+    font-size: 24px;
+  }
+
+  .hero-section p {
+    font-size: 14px;
+  }
+
+  .hero-section img {
+    height:300px;
+    width:300px;
+    margin-top: 15px;
+  }
+}
+@media (max-width:768px) {
+  .about-hero{
+    padding:0px;
+    margin:0px;
+  }
+  
+}
 
 </style>
 <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
@@ -65,7 +145,7 @@
 <section class="about-hero">
   <div class="hero-text">
     <h1 class="text-center">About Us</h1>
-    <p>
+    <p class="ms-5">
 Rooted in the scenic landscapes of Uttarakhand, India, we are a dynamic digital media
  agency driven by innovation, insight, and imagination. Our talented team affectionately known 
  as the social bees is composed of seasoned professionals who live and breathe the digital pulse.
@@ -77,7 +157,7 @@ At our core, we think strategically, research thoroughly, and create passionatel
 </section>
 <section class="hero-section">
   <div class="row d-flex me-0 mt-1">
-  <div class="col-lg-6 col-md-6 ms-1 ">
+  <div class="col-lg-6 col-md-6 ms-5">
   <h1>🔍 What<span class="text-warning"> We Do ?<span></h1>
   <p>We are a vibrant digital media agency with a global footprint, collaborating with clients across India, the U.A.E., Australia, and beyond. Our expertise spans a diverse range of industries including e-commerce, technology, retail, and events, where we seamlessly blend creativity with strategy to craft tailor-made digital experiences.
 Our work speaks for itself:
@@ -86,7 +166,7 @@ For e-commerce ventures, we dig deep into business nuances to deliver performanc
 Our commitment to innovation has earned us recognition, including the prestigious ‘Best Digital Innovation’ Award in Uttarakhand a testament to our passion and impact in the digital sphere.
 We don’t just market. We celebrate, elevate, and amplify. And our clients below are living proof.</p>
 </div>
-<div class="col-lg-4 col-md-4 img">
+<div class="col-lg-3 col-md-3 img">
   <img src="https://cssanimation.io/blog/wp-content/uploads/2023/09/Teamwork-And-Collaboration-How-To-Improve-Both-At-Work-1.jpg"alt="image" width="auto" height="400px">
 </div>
 </div>
@@ -94,22 +174,32 @@ We don’t just market. We celebrate, elevate, and amplify. And our clients belo
 </section>
 
 <section class="mission-section">
-  <div class="text">
-    <h2 class="text-warning">🚀 Our Mission</h2>
-    <p>Empowering brands with data-driven digital strategies that scale and convert.
-      We live and breathe digital. The Internet is our home.
-    </p>
-  </div>
-  <div class="image">
-    <img src="https://thumbs.dreamstime.com/b/close-up-group-smiling-young-people-showing-their-success-isolated-white-276666185.jpg" alt="Mission Image">
+  <div class="container">
+    <div class="row justify-content-center align-items-center">
+      <div class="col-lg-4 text-center text-lg-end mb-3 mb-lg-0">
+        <div class="text">
+          <h2 class="text-warning text-center">🚀 Our Mission</h2>
+          <p class="text-center">
+          We live and breathe digital. The Internet is our home.</p>
+        </div>
+      </div>
+
+      <div class="col-lg-4 text-center mb-3 mb-lg-0">
+        <div class="image">
+          <img src="https://thumbs.dreamstime.com/b/close-up-group-smiling-young-people-showing-their-success-isolated-white-276666185.jpg" alt="Mission Image" class="img-fluid rounded">
+        </div>
+      </div>
+
+      <div class="col-lg-4 text-center text-lg-start">
+        <div class="text">
+          <h2 class="text-warning text-center">🌟 Our Vision</h2>
+          <p class="text-center">We envision a smarter, connected, digital future where every brand thrives online.</p>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
-<section class="vision-section">
-    <div class="container" data-aos="fade-up">
-      <h2 class="text-warning">🌟 Our Vision</h2>
-      <p>We envision a smarter, connected, digital future where every brand thrives online.</p>
-    </div>
-  </section>
+
 <section class="stats-counter">
   <div class="counter">
     <h3 class="count" data-target="150">0</h3>
