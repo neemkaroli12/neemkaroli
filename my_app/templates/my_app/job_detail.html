@@ -38,19 +38,7 @@
     margin-bottom: 30px;
 }
 
-.job-tags {
-    margin-bottom: 20px;
-}
 
-.job-tags span {
-    display: inline-block;
-    background: #37d4e0ff;
-    color: #333;
-    font-size: 14px;
-    padding: 6px 12px;
-    margin-right: 10px;
-    border-radius: 6px;
-}
 
 .apply-btn {
     display: inline-block;
@@ -81,20 +69,12 @@
 
 <div class="job-detail-container">
     <h1 class="job-title">{{ job.title }}</h1>
-    
     <div class="job-meta">
-    <strong>Ref No:</strong> {{ job.reference_number }} <br>
+    <strong>Ref No:</strong> {{ job.reference_number }}<br>
     <strong>Location:</strong> {{ job.location }} <br>
     <strong>Type:</strong> {{ job.job_type }} <br>
     <strong>Salary:</strong> {{ job.salary|default:"Not disclosed" }}
 </div>
-
-
-    <div class="job-tags">
-        <span>{{ job.experience_level }}</span>
-        <span>{{ job.category }}</span>
-    </div>
-
     <div class="job-description">
         <strong>Description</strong><br>
         {{ job.description|linebreaks }}
