@@ -137,3 +137,6 @@ def apply_job(request, job_id):
 def web_design(request):
     return render(request,'my_app/web_design.html')
 
+def testi(request):
+    return render(request,'my_app/testimonial.html')
+
