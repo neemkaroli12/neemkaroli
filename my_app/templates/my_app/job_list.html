@@ -1,19 +1,20 @@
-
 {% block content %}
-<div class="container py-5">
-  <div class="row gx-4 gy-4"> <!-- Gap between columns and rows -->
-    {% for job in jobs %}
-      <div class="col-md-6 col-lg-4"> <!-- Responsive column -->
-        <div class="job-card p-3 border rounded shadow-sm" data-type="{{ job.job_type }}">
-          <div class="job-title h5">{{ job.title }}</div>
-          <div class="job-type text-muted">{{ job.job_type }}</div>
-          <div class="job-location">📍 {{ job.location }}</div>
-          <a href="{% url 'my_app:job_detail' job.id %}" class="btn btn-primary mt-3">View Details</a>
+  <div class="container py-5">
+    <div class="row gx-4 gy-4">
+      
+      {% for job in jobs %}
+        <div class="col-md-6 col-lg-4">
+          
+          <div class="job-card p-3 border rounded shadow-sm" data-type="{{ job.job_type }}">
+            <div class="job-title h5">{{ job.title }}</div>
+            <div class="job-type text-muted">{{ job.job_type }}</div>
+            <div class="job-location">📍 {{ job.location }}</div>
+            <a href="{% url 'my_app:job_detail' job.id %}" class="btn btn-primary mt-3">View Details</a>
+          </div>
         </div>
-      </div>
-    {% empty %}
-      <p>No jobs available.</p>
-    {% endfor %}
+      {% empty %}
+        <p>No jobs available.</p>
+      {% endfor %}
+    </div>
   </div>
-</div>
 {% endblock %}

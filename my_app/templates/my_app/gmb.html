@@ -1,144 +1,137 @@
-{% extends "layout.html" %}
+{% extends 'layout.html' %}
 {% load static %}
-{% block title %}Google My Business{% endblock  %}
-{% block content%}
-
-<style>
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-
- 
-
-  .gmb-section {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 150px;
-    padding: 20px;
-    text-align: center;
-    background: linear-gradient(-45deg, #ff6b6b, #f9ca24, #6ab04c, #686de0);
-    background-size: 400% 400%;
-    animation: gradientMove 8s ease infinite;
-    color: white;
-    flex-wrap: wrap;
-  }
-
-  .gmb-section h2 {
-    font-size: 1.8rem;
-  }
-
-  @keyframes gradientMove {
-    0% {
-      background-position: 0% 50%;
+{% block title %}
+  Google My Business
+{% endblock %}
+{% block content %}
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
     }
-    50% {
-      background-position: 100% 50%;
+    
+    .gmb-section {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 150px;
+      padding: 20px;
+      text-align: center;
+      background: linear-gradient(-45deg, #ff6b6b, #f9ca24, #6ab04c, #686de0);
+      background-size: 400% 400%;
+      animation: gradientMove 8s ease infinite;
+      color: white;
+      flex-wrap: wrap;
     }
-    100% {
-      background-position: 0% 50%;
-    }
-  }
-
- 
-  .gmb-card {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 20px;
-    padding: 40px 15px;
-    background: linear-gradient(135deg, #1f1c2c, #928dab);
-  }
-
-  
-  .gmb-card-body {
-    background: linear-gradient(135deg, rgb(78, 161, 255), rgb(192, 249, 35));
-    color: white;
-    padding: 20px;
-    border-radius: 15px;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
-    transition: 0.4s ease;
-  }
-
-  .gmb-card-body:hover {
-    transform: scale(1.05);
-    background: linear-gradient(135deg, #43cea2, #185a9d);
-    cursor: pointer;
-  }
-
-  .gmb-card-body h4 {
-    font-size: 1.1rem;
-    margin-bottom: 10px;
-  }
-
-  .gmb-card-body p {
-    font-size: 0.95rem;
-    line-height: 1.5;
-  }
-
- 
-  @media (max-width: 480px) {
+    
     .gmb-section h2 {
-      font-size: 1.4rem;
+      font-size: 1.8rem;
     }
-
+    
+    @keyframes gradientMove {
+      0% {
+        background-position: 0% 50%;
+      }
+      50% {
+        background-position: 100% 50%;
+      }
+      100% {
+        background-position: 0% 50%;
+      }
+    }
+    
+    .gmb-card {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+      padding: 40px 15px;
+      background: linear-gradient(135deg, #1f1c2c, #928dab);
+    }
+    
     .gmb-card-body {
-      padding: 15px;
+      background: linear-gradient(135deg, rgb(78, 161, 255), rgb(192, 249, 35));
+      color: white;
+      padding: 20px;
+      border-radius: 15px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+      transition: 0.4s ease;
     }
-
+    
+    .gmb-card-body:hover {
+      transform: scale(1.05);
+      background: linear-gradient(135deg, #43cea2, #185a9d);
+      cursor: pointer;
+    }
+    
     .gmb-card-body h4 {
-      font-size: 1rem;
+      font-size: 1.1rem;
+      margin-bottom: 10px;
     }
-
+    
     .gmb-card-body p {
-      font-size: 0.9rem;
+      font-size: 0.95rem;
+      line-height: 1.5;
     }
-  }
-</style>
+    
+    @media (max-width: 480px) {
+      .gmb-section h2 {
+        font-size: 1.4rem;
+      }
+    
+      .gmb-card-body {
+        padding: 15px;
+      }
+    
+      .gmb-card-body h4 {
+        font-size: 1rem;
+      }
+    
+      .gmb-card-body p {
+        font-size: 0.9rem;
+      }
+    }
+  </style>
 
-<!-- HTML -->
-<div class="gmb-section">
-  <h2>🗺 Google My Business Listing</h2>
-</div>
-
-<div class="gmb-card">
-  <div class="gmb-card-body">
-    <h4>📍 PPC & Google My Business (GMB) Listing Services</h4>
-    <p>Put your business on the map—literally and digitally. Our combined Pay-Per-Click (PPC) and Google My Business (GMB) services are designed to elevate your visibility, attract local traffic, and convert search intent into business outcomes.</p>
+  <!-- HTML -->
+  <div class="gmb-section">
+    <h2>🗺 Google My Business Listing</h2>
   </div>
 
-  <div class="gmb-card-body">
-    <h4>🗺 Google My Business Profile Optimization</h4>
-    <p>We optimize your GMB listing with accurate business details, compelling descriptions, high-quality visuals, and location-specific targeting.</p>
+  <div class="gmb-card">
+    <div class="gmb-card-body">
+      <h4>📍 PPC & Google My Business (GMB) Listing Services</h4>
+      <p>Put your business on the map—literally and digitally. Our combined Pay-Per-Click (PPC) and Google My Business (GMB) services are designed to elevate your visibility, attract local traffic, and convert search intent into business outcomes.</p>
+    </div>
+
+    <div class="gmb-card-body">
+      <h4>🗺 Google My Business Profile Optimization</h4>
+      <p>We optimize your GMB listing with accurate business details, compelling descriptions, high-quality visuals, and location-specific targeting.</p>
+    </div>
+
+    <div class="gmb-card-body">
+      <h4>📈 Local Search Enhancement</h4>
+      <p>Be the top choice in your area with strategic location tagging, review management, and localized SEO techniques.</p>
+    </div>
+
+    <div class="gmb-card-body">
+      <h4>💰 Location-Based PPC Campaigns</h4>
+      <p>Targeted ads using geo-targeting, behavior analysis, and keyword precision to reach high-intent users in your region.</p>
+    </div>
+
+    <div class="gmb-card-body">
+      <h4>📷 Visual Assets & Branding Integration</h4>
+      <p>Branded visuals—photos, logos, and cover images—that align with your style and improve GMB presence across platforms.</p>
+    </div>
+
+    <div class="gmb-card-body">
+      <h4>🧠 Analytics & Conversion Tracking</h4>
+      <p>Get detailed insights into ad performance, listing engagement, and conversions to guide your strategy.</p>
+    </div>
+
+    <div class="gmb-card-body">
+      <h4>🤝 Reputation & Review Management</h4>
+      <p>Build trust through positive reviews and engagement, responding to customer feedback and building loyalty.</p>
+    </div>
   </div>
-
-  <div class="gmb-card-body">
-    <h4>📈 Local Search Enhancement</h4>
-    <p>Be the top choice in your area with strategic location tagging, review management, and localized SEO techniques.</p>
-  </div>
-
-  <div class="gmb-card-body">
-    <h4>💰 Location-Based PPC Campaigns</h4>
-    <p>Targeted ads using geo-targeting, behavior analysis, and keyword precision to reach high-intent users in your region.</p>
-  </div>
-
-  <div class="gmb-card-body">
-    <h4>📷 Visual Assets & Branding Integration</h4>
-    <p>Branded visuals—photos, logos, and cover images—that align with your style and improve GMB presence across platforms.</p>
-  </div>
-
-  <div class="gmb-card-body">
-    <h4>🧠 Analytics & Conversion Tracking</h4>
-    <p>Get detailed insights into ad performance, listing engagement, and conversions to guide your strategy.</p>
-  </div>
-
-  <div class="gmb-card-body">
-    <h4>🤝 Reputation & Review Management</h4>
-    <p>Build trust through positive reviews and engagement, responding to customer feedback and building loyalty.</p>
-  </div>
-</div>
-
-
-
-{% endblock%}
+{% endblock %}

@@ -1,128 +1,121 @@
 {% extends 'layout.html' %}
-{% block title %}JOB{% endblock  %}
+{% block title %}
+  JOB
+{% endblock %}
 
 {% block content %}
-<style>
-.job-detail-container {
-    max-width: 900px;
-    margin: 40px auto;
-    padding: 30px;
-    background: #fff;
-    border-radius: 12px;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-    font-family: 'Segoe UI', sans-serif;
-}
-
-.job-title {
-    font-size: 32px;
-    font-weight: 700;
-    color: #333;
-    margin-bottom: 10px;
-}
-
-.job-meta {
-    font-size: 16px;
-    color: #666;
-    margin-bottom: 20px;
-    line-height: 1.8;
+  <style>
+    .job-detail-container {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 30px;
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+      font-family: 'Segoe UI', sans-serif;
+    }
     
-
-}
-.job-meta strong {
-    color: #444;
-}
-.job-description {
-    font-size: 18px;
-    line-height: 1.6;
-    color: #444;
-    margin-bottom: 30px;
-}
-
-
-
-.apply-btn {
-    display: inline-block;
-    padding: 12px 25px;
-    background-color: #007bff;
-    color: #fff;
-    border-radius: 8px;
-    text-decoration: none;
-    font-weight: 600;
-    transition: background 0.3s ease;
-}
-
-.apply-btn:hover {
-    background-color: #0056b3;
-}
-
-/* Mobile Responsive */
-@media (max-width: 768px) {
     .job-title {
-        font-size: 26px;
+      font-size: 32px;
+      font-weight: 700;
+      color: #333;
+      margin-bottom: 10px;
     }
-
+    
+    .job-meta {
+      font-size: 16px;
+      color: #666;
+      margin-bottom: 20px;
+      line-height: 1.8;
+    }
+    .job-meta strong {
+      color: #444;
+    }
     .job-description {
-        font-size: 16px;
+      font-size: 18px;
+      line-height: 1.6;
+      color: #444;
+      margin-bottom: 30px;
     }
-}
-</style>
+    
+    .apply-btn {
+      display: inline-block;
+      padding: 12px 25px;
+      background-color: #007bff;
+      color: #fff;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: background 0.3s ease;
+    }
+    
+    .apply-btn:hover {
+      background-color: #0056b3;
+    }
+    
+    /* Mobile Responsive */
+    @media (max-width: 768px) {
+      .job-title {
+        font-size: 26px;
+      }
+    
+      .job-description {
+        font-size: 16px;
+      }
+    }
+  </style>
 
-<div class="job-detail-container">
+  <div class="job-detail-container">
     <h1 class="job-title">{{ job.title }}</h1>
     <div class="job-meta">
-    <strong>Ref No:</strong> {{ job.reference_number }}<br>
-    <strong>Location:</strong> {{ job.location }} <br>
-    <strong>Type:</strong> {{ job.job_type }} <br>
-    <strong>Salary:</strong> {{ job.salary|default:"Not disclosed" }}
-</div>
+      <strong>Ref No:</strong> {{ job.reference_number }}<br />
+      <strong>Location:</strong> {{ job.location }} <br />
+      <strong>Type:</strong> {{ job.job_type }} <br />
+      <strong>Salary:</strong> {{ job.salary|default:'Not disclosed' }}
+    </div>
     <div class="job-description">
-        <strong>Description</strong><br>
-        {{ job.description|linebreaks }}
+      <strong>Description</strong><br />
+      {{ job.description|linebreaks }}
     </div>
 
-<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#applyModal">
-  Apply Now
-</button>
+    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#applyModal">Apply Now</button>
+  </div>
 
-</div>
+ 
+  <div class="modal fade" id="applyModal" tabindex="-1" aria-labelledby="applyModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="applyModalLabel">Apply for Job</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
 
-<!-- Modal -->
-<div class="modal fade" id="applyModal" tabindex="-1" aria-labelledby="applyModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered"> <!-- center modal -->
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="applyModalLabel">Apply for Job</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-
-      <div class="modal-body">
-        <!-- Your Form Inside Modal -->
-        <form id="applyForm" method="post" enctype="multipart/form-data"
-              action="{% url 'my_app:apply_job' job.id %}">
-          {% csrf_token %}
-          <div class="mb-3">
+        <div class="modal-body">
+          
+          <form id="applyForm" method="post" enctype="multipart/form-data" action="{% url 'my_app:apply_job' job.id %}">
+            {% csrf_token %}
+            <div class="mb-3">
               <label for="name" class="form-label">Your Name</label>
-              <input type="text" name="name" class="form-control" required>
-          </div>
-          <div class="mb-3">
+              <input type="text" name="name" class="form-control" required />
+            </div>
+            <div class="mb-3">
               <label for="email" class="form-label">Your Email</label>
-              <input type="email" name="email" class="form-control" required>
-          </div>
-          <div class="mb-3">
+              <input type="email" name="email" class="form-control" required />
+            </div>
+            <div class="mb-3">
               <label for="cv" class="form-label">Upload CV</label>
-              <input type="file" name="cv" class="form-control" required>
-          </div>
-          <div class="mb-3">
-          <label for="textarea" class="form-label">Message</label>
-          <textarea name="textarea" class="form-control" rows="4" required></textarea>
-          </div>
+              <input type="file" name="cv" class="form-control" required />
+            </div>
+            <div class="mb-3">
+              <label for="textarea" class="form-label">Message</label>
+              <textarea name="textarea" class="form-control" rows="4" required></textarea>
+            </div>
 
-          <button type="submit" class="btn btn-primary">Submit Application</button>
-        </form>
+            <button type="submit" class="btn btn-primary">Submit Application</button>
+          </form>
+        </div>
       </div>
     </div>
   </div>
-</div>
-
-
 {% endblock %}

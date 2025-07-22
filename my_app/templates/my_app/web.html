@@ -1,203 +1,197 @@
-{% extends "layout.html" %}
-{% load  static  %}
-{% block title %}website development{% endblock  %}
+{% extends 'layout.html' %}
+{% load static %}
+{% block title %}
+  website development
+{% endblock %}
 {% block content %}
-<style>
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-
-
-.hero-section {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 150px;
-  background: linear-gradient(-45deg, #ff416c, #ff4b2b, #1e3c72, #2a5298);
-  background-size: 800% 800%;
-  animation: gradientMove 10s ease infinite;
-}
-
-.puzzle-text {
-  font-size: 2.5rem;
-  font-weight: bold;
-  text-align: center;
-  position: relative;
-  animation: puzzleFade 1s ease-in-out forwards;
-  letter-spacing: 2px;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
-  color:white;
-}
-
-@keyframes gradientMove {
-  0% {background-position: 0% 50%;}
-  50% {background-position: 100% 50%;}
-  100% {background-position: 0% 50%;}
-}
-
-@keyframes puzzleFade {
-  from {opacity: 0; transform: scale(0.95);}
-  to {opacity: 1; transform: scale(1);}
-}
-
-.card-section {
-  padding: 40px 20px;
-  background: #f0f0f5;
-}
-
-.card-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 30px;
-}
-
-.service-card {
-  background: linear-gradient(135deg, #ffffff, #f9f9ff);
-  border-radius: 20px;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
-  padding: 25px;
-  color: #333;
-  position: relative;
-  overflow: hidden;
-  transition: transform 0.4s ease, box-shadow 0.4s ease;
-  cursor: pointer;
-}
-.service-card::before {
-  content: '';
-  position: absolute;
-  top: -50%;
-  left: -50%;
-  width: 200%;
-  height: 200%;
-  background: radial-gradient(circle at center, rgba(255,255,255,0.1), transparent 70%);
-  opacity: 0;
-  transition: opacity 0.4s ease, transform 0.4s ease;
-  transform: scale(0.5);
-  z-index: 0;
-}
-
-.service-card:hover::before {
-  opacity: 1;
-  transform: scale(1.2);
-}
-
-.service-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 20px 30px rgba(0,0,0,0.1);
-}
-
-.service-card h3 {
-  margin-bottom: 10px;
-  color: #063970;
-  z-index: 1;
-  position: relative;
-}
-
-.service-card p {
-  line-height: 1.6;
-  z-index: 1;
-  position: relative;
-}
-
-@media(max-width:768px){
-    .puzzle-text{
-        font-size:2.2rem;
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
     }
-}
-
-</style>
+    
+    .hero-section {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 150px;
+      background: linear-gradient(-45deg, #ff416c, #ff4b2b, #1e3c72, #2a5298);
+      background-size: 800% 800%;
+      animation: gradientMove 10s ease infinite;
+    }
+    
+    .puzzle-text {
+      font-size: 2.5rem;
+      font-weight: bold;
+      text-align: center;
+      position: relative;
+      animation: puzzleFade 1s ease-in-out forwards;
+      letter-spacing: 2px;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+      color: white;
+    }
+    
+    @keyframes gradientMove {
+      0% {
+        background-position: 0% 50%;
+      }
+      50% {
+        background-position: 100% 50%;
+      }
+      100% {
+        background-position: 0% 50%;
+      }
+    }
+    
+    @keyframes puzzleFade {
+      from {
+        opacity: 0;
+        transform: scale(0.95);
+      }
+      to {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+    
+    .card-section {
+      padding: 40px 20px;
+      background: #f0f0f5;
+    }
+    
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 30px;
+    }
+    
+    .service-card {
+      background: linear-gradient(135deg, #ffffff, #f9f9ff);
+      border-radius: 20px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+      padding: 25px;
+      color: #333;
+      position: relative;
+      overflow: hidden;
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+      cursor: pointer;
+    }
+    .service-card::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: radial-gradient(circle at center, rgba(255, 255, 255, 0.1), transparent 70%);
+      opacity: 0;
+      transition: opacity 0.4s ease, transform 0.4s ease;
+      transform: scale(0.5);
+      z-index: 0;
+    }
+    
+    .service-card:hover::before {
+      opacity: 1;
+      transform: scale(1.2);
+    }
+    
+    .service-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 20px 30px rgba(0, 0, 0, 0.1);
+    }
+    
+    .service-card h3 {
+      margin-bottom: 10px;
+      color: #063970;
+      z-index: 1;
+      position: relative;
+    }
+    
+    .service-card p {
+      line-height: 1.6;
+      z-index: 1;
+      position: relative;
+    }
+    
+    @media (max-width: 768px) {
+      .puzzle-text {
+        font-size: 2.2rem;
+      }
+    }
+  </style>
 
   <div class="hero-section" id="hero">
     <div class="puzzle-text">Website Development</div>
   </div>
 
   <div class="card-section">
-  <div class="card-grid">
-    <div class="service-card">
-      <h3>🛠 Custom Website Design & Development</h3>
-      <p>
-        We design and build bespoke websites that reflect your brand’s identity, values, and goals...
-      </p>
-    </div>
+    <div class="card-grid">
+      <div class="service-card">
+        <h3>🛠 Custom Website Design & Development</h3>
+        <p>We design and build bespoke websites that reflect your brand’s identity, values, and goals...</p>
+      </div>
 
-    <div class="service-card">
-      <h3>📱 Responsive Across Devices</h3>
-      <p>
-        Every website we create is fully responsive, ensuring it looks stunning and works perfectly...
-      </p>
-    </div>
+      <div class="service-card">
+        <h3>📱 Responsive Across Devices</h3>
+        <p>Every website we create is fully responsive, ensuring it looks stunning and works perfectly...</p>
+      </div>
 
-    <div class="service-card">
-      <h3>⚡ High-Speed & Optimized Performance</h3>
-      <p>
-        Our developers use lightweight frameworks for fast-loading websites and improved SEO.
-      </p>
-    </div>
+      <div class="service-card">
+        <h3>⚡ High-Speed & Optimized Performance</h3>
+        <p>Our developers use lightweight frameworks for fast-loading websites and improved SEO.</p>
+      </div>
 
-    <div class="service-card">
-      <h3>🔐 Secure & Scalable Architecture</h3>
-      <p>
-        We use modern security protocols and scalable solutions to protect and grow your website.
-      </p>
-    </div>
+      <div class="service-card">
+        <h3>🔐 Secure & Scalable Architecture</h3>
+        <p>We use modern security protocols and scalable solutions to protect and grow your website.</p>
+      </div>
 
-    <div class="service-card">
-      <h3>🔎 SEO-Ready Structure</h3>
-      <p>
-        Clean code, metadata, and content strategy for better search visibility.
-      </p>
-    </div>
+      <div class="service-card">
+        <h3>🔎 SEO-Ready Structure</h3>
+        <p>Clean code, metadata, and content strategy for better search visibility.</p>
+      </div>
 
-    <div class="service-card">
-      <h3>🤝 End-to-End Project Support</h3>
-      <p>
-        From planning to launch—we stay with you to ensure top-quality delivery.
-      </p>
+      <div class="service-card">
+        <h3>🤝 End-to-End Project Support</h3>
+        <p>From planning to launch—we stay with you to ensure top-quality delivery.</p>
+      </div>
     </div>
   </div>
-</div>
 
   <script>
-    const hero = document.getElementById("hero");
-
+    const hero = document.getElementById('hero')
+    
     const gradients = [
-      ["#ff416c", "#ff4b2b"],
-      ["#1e3c72", "#2a5298"],
-      ["#00c9ff", "#92fe9d"],
-      ["#f7971e", "#ffd200"],
-      ["#8e2de2", "#4a00e0"],
-      ["#00b09b", "#96c93d"],
-    ];
-
-    let index = 0;
-
+      ['#ff416c', '#ff4b2b'],
+      ['#1e3c72', '#2a5298'],
+      ['#00c9ff', '#92fe9d'],
+      ['#f7971e', '#ffd200'],
+      ['#8e2de2', '#4a00e0'],
+      ['#00b09b', '#96c93d']
+    ]
+    
+    let index = 0
+    
     function changeBackground() {
-      const [start, end] = gradients[index];
-      hero.style.background = `linear-gradient(45deg, ${start}, ${end})`;
-      index = (index + 1) % gradients.length;
+      const [start, end] = gradients[index]
+      hero.style.background = `linear-gradient(45deg, ${start}, ${end})`
+      index = (index + 1) % gradients.length
     }
-
-    setInterval(changeBackground, 4000); 
-   
-  const colors = [
-    ['#ff9a9e', '#fad0c4'],
-    ['#a1c4fd', '#c2e9fb'],
-    ['#fbc2eb', '#a6c1ee'],
-    ['#ffecd2', '#fcb69f'],
-    ['#cfd9df', '#e2ebf0'],
-  ];
-
-  document.querySelectorAll('.service-card').forEach(card => {
-    const [start, end] = colors[Math.floor(Math.random() * colors.length)];
-    card.style.background = `linear-gradient(135deg, ${start}, ${end})`;
-  });
-
-
+    
+    setInterval(changeBackground, 4000)
+    
+    const colors = [
+      ['#ff9a9e', '#fad0c4'],
+      ['#a1c4fd', '#c2e9fb'],
+      ['#fbc2eb', '#a6c1ee'],
+      ['#ffecd2', '#fcb69f'],
+      ['#cfd9df', '#e2ebf0']
+    ]
+    
+    document.querySelectorAll('.service-card').forEach((card) => {
+      const [start, end] = colors[Math.floor(Math.random() * colors.length)]
+      card.style.background = `linear-gradient(135deg, ${start}, ${end})`
+    })
   </script>
-
-
-
-{% endblock  %}
+{% endblock %}
