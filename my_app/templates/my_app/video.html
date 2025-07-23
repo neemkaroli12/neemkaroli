@@ -1,0 +1,94 @@
+{% extends "layout.html" %}
+{% load static %}
+{% block title %}Video Ads{% endblock  %}
+{% block content %}
+<style>
+    .video-section{
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    background: linear-gradient(270deg, #ff4b2b, #ff416c, #1e90ff, #23a6d5, #0f2027);
+    background-size: 800% 800%;
+    height: 150px;
+    animation: gradientBG 15s ease infinite;
+}
+h2{
+  font-size:40px;
+}
+@keyframes gradientBG {
+      0% {
+        background-position: 0% 50%;
+      }
+      50% {
+        background-position: 100% 50%;
+      }
+      100% {
+        background-position: 0% 50%;
+      }
+    }
+.video-product video{
+    width:100%;
+    height:300px;
+} 
+@media (max-width: 768px) {
+    .design-section {
+      flex-direction: column;
+      
+    }
+  } 
+.design-section{
+    gap:30px;
+  }            
+</style>
+<div class="video-section">
+    <div class="video-text">
+        <h2 class="text-center text-white">Video Ads and Gallery</h2>
+    </div>
+</div>
+<div class=" container-fluid video-items">
+<div class="design-section d-flex justify-content-center mt-4">
+  <div class="video-product col-lg-3 col-md-4 col-sm-6">
+    <video controls muted autoplay loop width="100%">
+      <source src="{% static 'videos/WhatsApp Video 2025-07-22 at 12.11.54_d167853a.mp4' %}" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </div>
+  <div class="video-product col-lg-3 col-md-4 col-sm-6">
+    <video controls muted autoplay loop width="100%">
+      <source src="{% static 'videos/WhatsApp Video 2025-07-22 at 12.11.59_c48d44c0.mp4' %}" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </div>
+  <div class="video-product col-lg-3 col-md-4 col-sm-6">
+    <video controls muted autoplay loop width="100%">
+      <source src="{% static 'videos/WhatsApp Video 2025-07-22 at 12.11.53_d9f13df8.mp4' %}" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </div>
+</div>
+<div class="design-section d-flex justify-content-center mt-4">
+  <div class="video-product col-lg-3 col-md-4 col-sm-6">
+    <video controls muted autoplay loop width="100%">
+      <source src="{% static 'videos/WhatsApp Video 2025-07-22 at 12.11.58_f7129b23.mp4' %}" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </div>
+  <div class="video-product col-lg-3 col-md-4 col-sm-6">
+    <video controls muted autoplay loop width="100%">
+      <source src="{% static 'videos/WhatsApp Video 2025-07-22 at 12.12.00_a8894e13.mp4' %}" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </div>
+  <div class="video-product col-lg-3 col-md-4 col-sm-6">
+    <video controls muted autoplay loop width="100%">
+      <source src="{% static 'videos/WhatsApp Video 2025-07-22 at 12.11.52_47af0486.mp4' %}" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </div>
+</div>
+</div>
+
+
+
+
+{% endblock  %}

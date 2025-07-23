@@ -1,0 +1,95 @@
+{% extends "layout.html" %}
+{% load static %}
+
+{% block title %}Logo Designs{% endblock %}
+
+{% block content %}
+<style>
+  /* Gradient background section */
+  .logo-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(270deg, #ff4b2b, #ff416c, #1e90ff, #23a6d5, #0f2027);
+    background-size: 800% 800%;
+    height: 180px;
+    animation: gradientBG 15s ease infinite;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  }
+
+  .logo-text {
+    font-size: 48px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  }
+
+  @keyframes gradientBG {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+
+  
+  .logo-design {
+    padding: 40px 0;
+  }
+
+  .design-section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .design-section .logo-img {
+    flex: 0 0 auto;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    justify-content: center;
+  }
+
+  .design-section .logo-img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
+  }
+  .design-section img {
+    width:100%;
+    height:250px;
+    display: block; 
+  }
+  @media (max-width: 768px) {
+    .design-section {
+      flex-direction: column;
+    }
+  }
+</style>
+
+
+<div class="logo-section">
+  <h2 class="logo-text text-white"> Logo Designs</h2>
+</div>
+
+<div class="container logo-design">
+  <div class="design-section">
+    <div class="logo-img col-lg-3 col-md-4 col-sm-6">
+      <img src="{% static 'images/WhatsApp Image 2025-07-22 at 12.10.29_643dd888.jpg' %}" alt="Logo 1" />
+    </div>
+    <div class="logo-img col-lg-3 col-md-4 col-sm-6">
+      <img src="{% static 'images/WhatsApp Image 2025-07-22 at 12.10.30_557395bc.jpg' %}" alt="Logo 2" />
+    </div>
+    <div class="logo-img col-lg-3 col-md-4 col-sm-6">
+      <img src="{% static 'images/WhatsApp Image 2025-07-22 at 12.10.38_b27a0541.jpg' %}" alt="Logo 3" />
+    </div>
+  </div>
+</div>
+{% endblock %}

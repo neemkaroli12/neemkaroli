@@ -140,3 +140,8 @@ def web_design(request):
 def testi(request):
     return render(request,'my_app/testimonial.html')
 
+def logo(request):
+    return render(request,'my_app/logo.html')
+
+def video(request):
+    return render(request,'my_app/video.html')

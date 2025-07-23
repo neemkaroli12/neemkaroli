@@ -82,18 +82,13 @@ WSGI_APPLICATION = 'myproject.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
 
-import dj_database_url
-import os
-
-# Default to SQLite for local development
-DEFAULT_DB_URL = 'sqlite:///' + str(BASE_DIR / 'db.sqlite3')
-
 DATABASES = {
-    'default': dj_database_url.config(
-        default=DEFAULT_DB_URL,
-        conn_max_age=600,  # Keeps DB connection open for 10 minutes
-    )
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
+    }
 }
+
 
 
 
