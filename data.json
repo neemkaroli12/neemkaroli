@@ -1,0 +1,708 @@
+[
+{
+  "model": "admin.logentry",
+  "pk": 1,
+  "fields": {
+    "action_time": "2025-07-12T08:57:56.981Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "1",
+    "object_repr": "sales",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 2,
+  "fields": {
+    "action_time": "2025-07-12T09:17:17.239Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "2",
+    "object_repr": "sales",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 3,
+  "fields": {
+    "action_time": "2025-07-12T09:48:31.608Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "2",
+    "object_repr": "sales",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 4,
+  "fields": {
+    "action_time": "2025-07-12T09:48:51.504Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "1",
+    "object_repr": "sales",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 5,
+  "fields": {
+    "action_time": "2025-07-14T03:48:10.656Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "3",
+    "object_repr": "sales",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 6,
+  "fields": {
+    "action_time": "2025-07-14T03:50:04.320Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "4",
+    "object_repr": "hfnksrng",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 7,
+  "fields": {
+    "action_time": "2025-07-14T03:50:28.487Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "5",
+    "object_repr": "vsfbosnlkjb",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 8,
+  "fields": {
+    "action_time": "2025-07-14T04:19:15.338Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "3",
+    "object_repr": "sales",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 9,
+  "fields": {
+    "action_time": "2025-07-14T04:19:23.685Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "4",
+    "object_repr": "hfnksrng",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 10,
+  "fields": {
+    "action_time": "2025-07-14T04:19:31.021Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "5",
+    "object_repr": "vsfbosnlkjb",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 11,
+  "fields": {
+    "action_time": "2025-07-14T04:25:36.343Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "6",
+    "object_repr": "sales",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 12,
+  "fields": {
+    "action_time": "2025-07-14T04:26:03.262Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "7",
+    "object_repr": "sales",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 13,
+  "fields": {
+    "action_time": "2025-07-14T04:26:16.640Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "8",
+    "object_repr": "SWQODFI",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 14,
+  "fields": {
+    "action_time": "2025-07-14T04:26:38.725Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "7",
+    "object_repr": "sales",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 15,
+  "fields": {
+    "action_time": "2025-07-14T06:40:58.440Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "7",
+    "object_repr": "sales",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 16,
+  "fields": {
+    "action_time": "2025-07-14T06:41:07.903Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "6",
+    "object_repr": "sales",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 17,
+  "fields": {
+    "action_time": "2025-07-14T06:41:16.960Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "8",
+    "object_repr": "SWQODFI",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 18,
+  "fields": {
+    "action_time": "2025-07-15T04:24:23.342Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "9",
+    "object_repr": "website developers",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 19,
+  "fields": {
+    "action_time": "2025-07-15T07:23:24.826Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "10",
+    "object_repr": "sales",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 20,
+  "fields": {
+    "action_time": "2025-07-15T07:23:46.219Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "11",
+    "object_repr": "marketing",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 21,
+  "fields": {
+    "action_time": "2025-07-15T10:09:35.790Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "9",
+    "object_repr": "website developers",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Description\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 22,
+  "fields": {
+    "action_time": "2025-07-15T10:11:22.750Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "10",
+    "object_repr": "sales",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Description\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 23,
+  "fields": {
+    "action_time": "2025-07-15T10:12:25.133Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "11",
+    "object_repr": "marketing",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Description\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 24,
+  "fields": {
+    "action_time": "2025-07-16T05:09:13.116Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "9",
+    "object_repr": "website developers",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Salary\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 25,
+  "fields": {
+    "action_time": "2025-07-16T06:37:21.372Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "1",
+    "object_repr": "sales",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 26,
+  "fields": {
+    "action_time": "2025-07-16T06:37:30.450Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "1",
+    "object_repr": "sales",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Reference number\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 27,
+  "fields": {
+    "action_time": "2025-07-16T06:37:43.847Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "1",
+    "object_repr": "sales",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 28,
+  "fields": {
+    "action_time": "2025-07-16T06:38:17.883Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "2",
+    "object_repr": "website developers",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 29,
+  "fields": {
+    "action_time": "2025-07-16T06:39:23.848Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "3",
+    "object_repr": "marketing",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 30,
+  "fields": {
+    "action_time": "2025-07-16T07:06:04.381Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "1",
+    "object_repr": "sales",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Reference number\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 31,
+  "fields": {
+    "action_time": "2025-07-16T07:06:15.100Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "1",
+    "object_repr": "sales",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Reference number\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 32,
+  "fields": {
+    "action_time": "2025-07-16T07:09:17.499Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "3",
+    "object_repr": "marketing",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Reference number\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 33,
+  "fields": {
+    "action_time": "2025-07-16T07:09:26.360Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "2",
+    "object_repr": "website developers",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Reference number\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 34,
+  "fields": {
+    "action_time": "2025-07-17T11:05:23.116Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "4",
+    "object_repr": "sales",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 35,
+  "fields": {
+    "action_time": "2025-07-17T11:11:48.868Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "4",
+    "object_repr": "sales",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 36,
+  "fields": {
+    "action_time": "2025-07-18T04:39:33.850Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "2",
+    "object_repr": "website developers",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Description\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 37,
+  "fields": {
+    "action_time": "2025-07-18T04:41:23.386Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "3",
+    "object_repr": "marketing",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Salary\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 38,
+  "fields": {
+    "action_time": "2025-07-18T04:41:35.130Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "2",
+    "object_repr": "website developers",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Salary\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 39,
+  "fields": {
+    "action_time": "2025-07-18T04:41:45.526Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "1",
+    "object_repr": "sales",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Salary\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 40,
+  "fields": {
+    "action_time": "2025-07-18T04:42:55.354Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "1",
+    "object_repr": "sales",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Description\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 41,
+  "fields": {
+    "action_time": "2025-07-18T04:43:54.095Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "3",
+    "object_repr": "marketing",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Description\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 42,
+  "fields": {
+    "action_time": "2025-07-18T04:45:03.650Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "2",
+    "object_repr": "website developers",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Description\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 43,
+  "fields": {
+    "action_time": "2025-07-18T07:06:32.044Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "5",
+    "object_repr": "Frontend",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 44,
+  "fields": {
+    "action_time": "2025-07-23T10:38:31.547Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "5",
+    "object_repr": "Frontend",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Description\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 45,
+  "fields": {
+    "action_time": "2025-07-23T10:39:03.255Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "5",
+    "object_repr": "Frontend",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Description\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 46,
+  "fields": {
+    "action_time": "2025-07-23T10:39:15.910Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "3",
+    "object_repr": "Marketing",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Title\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 47,
+  "fields": {
+    "action_time": "2025-07-23T10:39:21.719Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "1",
+    "object_repr": "sales",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 48,
+  "fields": {
+    "action_time": "2025-07-23T10:39:51.465Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "2",
+    "object_repr": "website developers",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Description\"]}}]"
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 1,
+  "fields": {
+    "password": "pbkdf2_sha256$1000000$7a8ocWumCRQvFRmRFqnp8Q$crVteCjRFNrLRinEurMNoTFZOGvcJZv+wZ0PzdA0i2k=",
+    "last_login": "2025-07-12T08:56:18.134Z",
+    "is_superuser": true,
+    "username": "sakshi",
+    "first_name": "",
+    "last_name": "",
+    "email": "sakshi@123gmail.com",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2025-07-12T08:55:33.265Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "paw34mye4nwq7of3om68k5t9bfv8u3v2",
+  "fields": {
+    "session_data": ".eJxVjDsOwjAQRO_iGll22PhDSc8ZrPXuBgeQI8VJhbg7iZQCutG8N_NWCdelpLXJnEZWF2XV6bfLSE-pO-AH1vukaarLPGa9K_qgTd8mltf1cP8OCrayraNnBAuIUaLPRA5skN7ZwBJ7gGgQOLjoSXxmGrYUrAkhd6bj82CM-nwB4q83jg:1uaW1q:dW-3XPZ7c3SN6r0jjr6TfuKDatnTSdPnlQad0Uy4LDU",
+    "expire_date": "2025-07-26T08:56:18.153Z"
+  }
+},
+{
+  "model": "my_app.jobpost",
+  "pk": 1,
+  "fields": {
+    "title": "sales",
+    "location": "noida",
+    "experience": "4+",
+    "job_type": "Full Time",
+    "salary": "₹ 2500-3000",
+    "description": "Job Role\r\n\r\nRecruit Life Advisor under your team to archive business target. Execution of sales strategy to increase market and reach penetration .Build long term relationship with new and existing new customers.\r\n\r\n Job Criteria\r\n\r\nQualification : Any Stream Graduate\r\n\r\nAge : Between 26 to 39\r\n\r\nCTC Bracket : Depend On Interview /Last Drop On Your Salary\r\n\r\nExperience we required who have experience in Field Sales with minimum 3 years' experience",
+    "posted_on": "2025-07-16",
+    "reference_number": "256"
+  }
+},
+{
+  "model": "my_app.jobpost",
+  "pk": 2,
+  "fields": {
+    "title": "website developers",
+    "location": "haldwani",
+    "experience": "1+",
+    "job_type": "Part Time",
+    "salary": "₹ 2500-3000",
+    "description": "About the job\r\nCompany Description\r\n\r\nAcıbadem Health Point, part of the Acıbadem Healthcare Group, is Turkey's leading private healthcare organization, operating 24 hospitals and 18 outpatient clinics. With a dedicated team of nearly 22,500 employees, including 3,500 doctors and 4,000 nurses, Acıbadem offers high-quality healthcare services using advanced technology and modern infrastructure. The group, which began as a district hospital in 1991, has expanded internationally and now operates in five countries, with JCI accreditation ensuring high standards of care.\r\n\r\n\r\nRole Description\r\n\r\nThis is a part-time remote role for a Frontend Developer. The Frontend Developer will be responsible for developing and implementing user interface components using modern web technologies. Day-to-day tasks include collaborating with designers and backend developers, creating responsive web designs, optimizing applications for maximum speed and scalability, and ensuring the technical feasibility of UI/UX designs.\r\n\r\n\r\nQualifications\r\n\r\nProficiency in Front-End Development and Responsive Web Design\r\nExperience with Back-End Web Development and general Web Development\r\nSolid understanding of Software Development principles\r\nExcellent problem-solving skills and attention to detail\r\nAbility to work independently and remotely\r\nBachelor's degree in Computer Science, Information Technology, or a related field of 1+\r\nExperience in the healthcare industry is a plus",
+    "posted_on": "2025-07-16",
+    "reference_number": "768"
+  }
+},
+{
+  "model": "my_app.jobpost",
+  "pk": 3,
+  "fields": {
+    "title": "Marketing",
+    "location": "haldwani",
+    "experience": "1+",
+    "job_type": "Internship",
+    "salary": "₹ 2500-3000",
+    "description": "External Interface\r\n\r\n(Enlist external agencies/authorities that you are required to deal with while discharging your duty)\r\n\r\nAgencies – Event Management \r\nGovernment/ regulatory bodies \r\nRetailers \r\nSponsors \r\n\r\nMinimum Qualification\r\n\r\n(i.e education, training etc.)\r\n\r\nGraduate, MBA (Marketing)\r\n\r\nMinimum Experience\r\n\r\n1-3 years of experience in retail industry; marketing experience is preferred\r\n\r\nSpecial Skills/Attributes\r\n\r\n(required for performing the job effectively)\r\n\r\nKnowledge of Advertising and PR concepts\r\nKnowledge of brand building \r\nKnowledge of pricing / budgeting",
+    "posted_on": "2025-07-16",
+    "reference_number": "567"
+  }
+},
+{
+  "model": "my_app.jobpost",
+  "pk": 5,
+  "fields": {
+    "title": "Frontend",
+    "location": "haldwani",
+    "experience": "3+",
+    "job_type": "hybrid",
+    "salary": "₹ 15000-20000",
+    "description": "A bachelor's degree in computer science, web development, or a related field is preferred but not always required. Practical experience and a strong portfolio can be equally valuable.\r\nExcellent knowledge and working experience in React JS ,Next js or Angular JS and Javascript.\r\nExperience in Web development (HTML5/ CSS3/ JavaScript/ SQL).\r\nFamiliarity with RESTful APIs.\r\n3+ experience\r\nCreativity and critical thinking to optimally implement new features.\r\nFamiliarity with code versioning tools like Git.\r\nLearn quickly and adapt to a fast-changing environment.\r\nAbility and eagerness to learn and explore new topics independently.",
+    "posted_on": "2025-07-18",
+    "reference_number": "789"
+  }
+}
+]
