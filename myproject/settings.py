@@ -82,29 +82,33 @@ WSGI_APPLICATION = 'myproject.wsgi.application'
 
 
 # Database
-# https://docs.djangoproject.com/en/5.1/ref/settings/#databases
+# # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
 
 # DATABASES = {
 #     'default': {
 #         'ENGINE': 'django.db.backends.sqlite3',
+
 #         'NAME': BASE_DIR / 'db.sqlite3',
 #     }
 # }
 
+# import dj_database_url
+
+# from decouple import config
 
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': os.environ.get('DB_NAME'),
-        'USER': os.environ.get('DB_USER'),
-        'PASSWORD': os.environ.get('DB_PASSWORD'),
-        'HOST': os.environ.get('DB_HOST'),
-        'PORT': os.environ.get('DB_PORT', '5432'),
-        'OPTIONS': {
-            'sslmode': 'require',  # Needed for Render PostgreSQL
-        }
+        'NAME': 'technologies_xz1x',
+        'USER': 'techuser',
+        'PASSWORD': '1MxWmwQbiiSMRdWKbLpoBqo7ldAb33lP',
+        'HOST': 'dpg-d20v5o95pdvs739gcrh0-a.oregon-postgres.render.com',
+        'PORT': '5432',
     }
 }
+
+
+
 
 
 # Password validation
