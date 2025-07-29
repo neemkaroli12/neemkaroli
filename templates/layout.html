@@ -339,8 +339,6 @@
         background-color: #12a79b;
         transform: scale(1.05);
       }
-      
-      /* Default Styling (Optional Cleanup) */
       .bg-imag {
         max-width: 100%;
         height: auto;
@@ -360,8 +358,7 @@
         font-size: 16px;
         line-height: 1.6;
       }
-      
-      /* Media Queries for Responsiveness */
+    
       @media (max-width: 992px) {
         .ms-5 {
           margin-left: 1rem !important;
@@ -369,7 +366,6 @@
       }
       
       @media (max-width: 768px) {
-        /* Stack introduction & image */
         .intro-section .row,
         .image-section .row,
         .steps-section .row {
@@ -401,7 +397,7 @@
       }
       @media(max-width:768px){
         .footer img{
-          padding-left:0px;
+          margin-inline-start: -25px;
         }
         .footer ul{
           padding:0px;
@@ -412,6 +408,7 @@
         }
         footer svg{
           padding-left:0px;
+          margin-left:-10px;
         }
       }
     </style>
@@ -425,9 +422,7 @@
     <header>
       <div class="container-fluid py-2" style="background-color:#01265d;">
         <div class="d-flex flex-wrap justify-content-between align-items-center">
-          <!-- Left Side: Phone & Email -->
           <ul class="nav gap-3 align-items-center mb-0">
-            <!-- Phone -->
             <li class="nav-item">
               <a class="nav-link text-white d-flex align-items-center gap-2" href="tel:+919389149580">
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" class="bi bi-telephone-fill" viewBox="0 0 16 16">
@@ -436,8 +431,6 @@
                 <span>+91 93891 49580</span>
               </a>
             </li>
-
-            <!-- Email -->
             <li class="nav-item">
               <a class="nav-link text-white d-flex align-items-center gap-2" href="mailto:sales@neemkarolitechnologies.com">
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" class="bi bi-envelope-fill" viewBox="0 0 16 16">
@@ -450,10 +443,7 @@
               </a>
             </li>
           </ul>
-
-          <!-- Right Side: Social Icons -->
           <ul class="nav gap-1 align-items-center mb-0">
-            <!-- Facebook -->
             <li class="nav-item">
               <a class="nav-link text-white" href="https://www.facebook.com/profile.php?id=61577864141320" target="_blank">
                 <i class=" fs-5">
@@ -463,8 +453,6 @@
                 </i>
               </a>
             </li>
-
-            <!-- LinkedIn -->
             <li class="nav-item">
               <a class="nav-link text-white" href="https://www.linkedin.com/company/neemkaroli-technologies/?viewAsMember=true" target="_blank">
                 <i class=" fs-5">
@@ -474,8 +462,6 @@
                 </i>
               </a>
             </li>
-
-            <!-- Instagram -->
             <li class="nav-item">
               <a class="nav-link text-white" href="#" target="_blank">
                 <i class="fs-5">
@@ -622,7 +608,7 @@
         </div>
 
         <div class="row">
-          <!-- SEO -->
+        
           <div class="col-md-4 mb-4">
             <div class="card h-100 text-center">
               <img src="{% static 'images/10946070-removebg-preview.png' %}" class="card-img-top img-fluid" style="height:180px; object-fit:contain;" alt="SEO" />
@@ -635,8 +621,6 @@
               </div>
             </div>
           </div>
-
-          <!-- Website Development -->
           <div class="col-md-4 mb-4">
             <div class="card h-100 text-center">
               <img src="{% static 'images/4421964.jpg' %}" class="card-img-top img-fluid" style="height:180px; object-fit:contain;" alt="Web Dev" />
@@ -649,8 +633,6 @@
               </div>
             </div>
           </div>
-
-          <!-- Social Media Marketing -->
           <div class="col-md-4 mb-4">
             <div class="card h-100 text-center">
               <img src="https://1.bp.blogspot.com/-KpUKTgtPeBQ/X3Ridg9YYnI/AAAAAAAACMg/wef9wBdD23Iz5vlWOm-OQUEEDvcd-4BQgCLcBGAsYHQ/s2048/social-media-marketing-background-images-7.png" class="card-img-top img-fluid" style="height:180px; object-fit:contain;" alt="SMM" />
@@ -663,8 +645,6 @@
               </div>
             </div>
           </div>
-
-          <!-- GMB -->
           <div class="col-md-4 mb-4">
             <div class="card h-100 text-center">
               <img src="{% static 'images/4266807-removebg-preview.png' %}" class="card-img-top img-fluid" style="height:180px; object-fit:contain;" alt="GMB" />
@@ -677,8 +657,6 @@
               </div>
             </div>
           </div>
-
-          <!-- PPC -->
           <div class="col-md-4 mb-4">
             <div class="card h-100 text-center">
               <img src="{% static 'images/3355-removebg-preview.png' %}" class="card-img-top img-fluid" style="height:180px; object-fit:contain;" alt="PPC" />
@@ -691,8 +669,6 @@
               </div>
             </div>
           </div>
-
-          <!-- Content Writing -->
           <div class="col-md-4 mb-4">
             <div class="card h-100 text-center">
               <img src="{% static 'images/10793.jpg' %}" class="card-img-top img-fluid" style="height:180px; object-fit:contain;" alt="Content Writing" />
@@ -707,7 +683,6 @@
           </div>
         </div>
       </div>
-
       <div class="container-fluid intro-section mt-4">
         <div class="row me-0">
           <div class="col-lg-8 col-md-8">

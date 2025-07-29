@@ -190,29 +190,23 @@
     }
     
     const container = document.getElementById('seo-cards')
-    
     seoServices.forEach((service) => {
       const col = document.createElement('div')
       col.className = 'col-lg-6 col-md-6'
-    
       const card = document.createElement('div')
       card.className = 'card seo-card h-100'
       card.style.background = getRandomGradient()
-    
       const body = document.createElement('div')
       body.className = 'card-body'
-    
       const title = document.createElement('h5')
       title.className = 'card-title'
       title.textContent = service.title
-    
       const list = document.createElement('ul')
       service.points.forEach((point) => {
         const li = document.createElement('li')
         li.textContent = point
         list.appendChild(li)
       })
-    
       body.appendChild(title)
       body.appendChild(list)
       card.appendChild(body)
