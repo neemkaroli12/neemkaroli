@@ -99,11 +99,11 @@ WSGI_APPLICATION = 'myproject.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'technologies_xz1x',
-        'USER': 'techuser',
-        'PASSWORD': '1MxWmwQbiiSMRdWKbLpoBqo7ldAb33lP',
-        'HOST': 'dpg-d20v5o95pdvs739gcrh0-a.oregon-postgres.render.com',
-        'PORT': '5432',
+        'NAME': 'neemkaroli',        # aapka database name
+        'USER': 'neemuser',          # aapka postgres user
+        'PASSWORD': 'StrongPassword123',  # password jo aapne set kiya
+        'HOST': 'localhost',         # VPS pe DB yahi chalega
+        'PORT': '5432',              # default port
     }
 }
 
