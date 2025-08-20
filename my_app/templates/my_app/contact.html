@@ -1,25 +1,25 @@
 {% extends 'layout.html' %}
 {% load static %}
+{% load widget_tweaks %}
+
 {% block title %}
   Contact
 {% endblock %}
+
 <style>
   * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
   }
-  
   .map {
     width: 100%;
     height: 300px;
     border: none;
   }
-  
   .card-body {
     padding: 20px;
   }
-  
   .info-row {
     display: flex;
     align-items: center;
@@ -27,28 +27,23 @@
     gap: 10px;
     flex-wrap: wrap;
   }
-  
   .info-row svg {
     flex-shrink: 0;
     color: black;
   }
-  
   .info-row span,
   .info-row p {
     margin: 0;
     color: black;
   }
-  
   @media (max-width: 768px) {
     .map {
       height: 200px;
     }
-  
     .info-row {
       flex-direction: row;
       align-items: flex-start;
     }
-  
     .info-row span {
       flex: 1;
     }
@@ -63,7 +58,6 @@
     transform: translateY(20px);
     animation: fadeInMove 1s ease forwards;
   }
-  
   @keyframes fadeInMove {
     to {
       opacity: 1;
@@ -76,10 +70,11 @@
     transition: all 0.3s ease;
   }
 </style>
+
 {% block content %}
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet" />
- 
+
   <div class="container py-5">
     <div class="row align-items-start">
       <div class="col-lg-6 mb-4">
@@ -98,28 +93,34 @@
           <a href="#" class="text-dark"><i class="bi bi-instagram fs-4"></i></a>
         </div>
       </div>
+
       <div class="col-lg-6 fade-in">
         <h3 class="mb-4">Have A Question?</h3>
         <form method="POST">
           {% csrf_token %}
+
           <div class="form-floating mb-3">
-            {{ myData.name }}
+            {{ myData.name|add_class:'form-control'|attr:'placeholder:Full Name' }}
             <label for="{{ myData.name.id_for_label }}">Full Name</label>
           </div>
+
           <div class="form-floating mb-3">
-            {{ myData.email }}
+            {{ myData.email|add_class:'form-control'|attr:'placeholder:Email' }}
             <label for="{{ myData.email.id_for_label }}">Email</label>
           </div>
+
           <div class="form-floating mb-3">
-            {{ myData.phone }}
+            {{ myData.phone|add_class:'form-control'|attr:'placeholder:Mobile Number' }}
             <label for="{{ myData.phone.id_for_label }}">Mobile Number</label>
           </div>
+
           <div class="form-floating mb-3">
-            {{ myData.designation }}
+            {{ myData.designation|add_class:'form-control'|attr:'placeholder:Designation' }}
             <label for="{{ myData.designation.id_for_label }}">Designation</label>
           </div>
+
           <div class="form-floating mb-3">
-            {{ myData.message }}
+            {{ myData.message|add_class:'form-control'|attr:'placeholder:Your Message, rows:4' }}
             <label for="{{ myData.message.id_for_label }}">Your Message</label>
           </div>
 
@@ -127,97 +128,69 @@
 
           {% if messages %}
             {% for message in messages %}
-              <div class="alert alert-success" role="alert">✅ {{ message }}</div>
+              <div class="alert alert-success mt-2" role="alert">✅ {{ message }}</div>
             {% endfor %}
           {% endif %}
         </form>
       </div>
     </div>
   </div>
+
+  <!-- Contact Locations -->
   <div class="container">
-    <div class="row row-cols-1 row-cols-md-3 g-4 me-0">
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+      <!-- Development Center -->
       <div class="col">
         <div class="card">
           <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m12!1m8!1m3!1d112071.03445292752!2d77.384044!3d28.623173!3m2!1i1024!2i768!4f13.1!2m1!1sSuite%3A402%2C%20H-149%20Sector%2063%2C%20Noida%2C%20India!5e0!3m2!1sen!2sus!4v1752229221438!5m2!1sen!2sus" allowfullscreen loading="lazy"></iframe>
           <div class="card-body">
             <h5 class="card-title text-center"><b>Development Center</b></h5>
             <div class="info-row">
-              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-geo-alt-fill colorchange" viewBox="0 0 16 16" style="color:black;">
-                <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10m0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6" />
-              </svg>
-              <span>Suite:402, H-149 Sector 63,<br />Noida, India (201301)</span>
+              <i class="bi bi-geo-alt-fill"></i><span>Suite:402, H-149 Sector 63, Noida, India (201301)</span>
             </div>
             <div class="info-row">
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope-fill mt-1 colorchange" viewBox="0 0 16 16" style="color:black;">
-                <path d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414zM0 4.697v7.104l5.803-3.558zM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586zm3.436-.586L16 11.801V4.697z" />
-              </svg>
-              <span>sales@neemkarolitechnologies.com</span>
+              <i class="bi bi-envelope-fill"></i><span>sales@neemkarolitechnologies.com</span>
             </div>
             <div class="info-row">
-              <a href="tel:+919389149580">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-telephone-fill mt-1 colorchange" viewBox="0 0 16 16" style="color:black;">
-                  <path fill-rule="evenodd" d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.68.68 0 0 0 .178.643l2.457 2.457a.68.68 0 0 0 .644.178l2.189-.547a1.75 1.75 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.6 18.6 0 0 1-7.01-4.42 18.6 18.6 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877z" />
-                </svg>
-                <span>9389149580</span>
-              </a>
+              <a href="tel:+919389149580"><i class="bi bi-telephone-fill"></i><span>9389149580</span></a>
             </div>
           </div>
         </div>
       </div>
+
+      <!-- Training Center -->
       <div class="col">
         <div class="card">
           <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m12!1m8!1m3!1d111345.47919154877!2d79.513422!3d29.295649!3m2!1i1024!2i768!4f13.1!2m1!1sNeemkaroli%20House%2C%20Haldwani%20Uttarakhand%20%3A%20262139!5e0!3m2!1sen!2sus!4v1752474119585!5m2!1sen!2sus" allowfullscreen loading="lazy"></iframe>
           <div class="card-body">
             <h5 class="card-title text-center"><b>Training Center</b></h5>
-
             <div class="info-row">
-              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-geo-alt-fill" viewBox="0 0 16 16" style="color:black;">
-                <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10m0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6" />
-              </svg>
-              <span class="text-center">Neemkaroli House,Haldwani,<br /> Uttarakhand:262139</span>
+              <i class="bi bi-geo-alt-fill"></i><span>Neemkaroli House, Haldwani, Uttarakhand: 262139</span>
             </div>
             <div class="info-row">
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope-fill mt-1 colorchange" viewBox="0 0 16 16" style="color:black;">
-                <path d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414zM0 4.697v7.104l5.803-3.558zM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586zm3.436-.586L16 11.801V4.697z" />
-              </svg>
-              <span class="mt-2">sales@neemkarolitechnologies.com</span>
+              <i class="bi bi-envelope-fill"></i><span>sales@neemkarolitechnologies.com</span>
             </div>
             <div class="info-row">
-              <a href="tel:+919389149580">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-telephone-fill mt-1 colorchange" viewBox="0 0 16 16" style="color:black;">
-                  <path fill-rule="evenodd" d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.68.68 0 0 0 .178.643l2.457 2.457a.68.68 0 0 0 .644.178l2.189-.547a1.75 1.75 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.6 18.6 0 0 1-7.01-4.42 18.6 18.6 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877z" />
-                </svg>
-                <span class="mt-1">9389149580</span>
-              </a>
+              <a href="tel:+919389149580"><i class="bi bi-telephone-fill"></i><span>9389149580</span></a>
             </div>
           </div>
         </div>
       </div>
+
+      <!-- Sales Office -->
       <div class="col">
         <div class="card">
           <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12616.357755388004!2d144.922897!3d-37.764501!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad65cf3888b3701%3A0x78ee489e1edcec8f!2s701%20Mt%20Alexander%20Rd%2C%20Moonee%20Ponds%20VIC%203039%2C%20Australia!5e0!3m2!1sen!2sus!4v1752473874578!5m2!1sen!2sus" allowfullscreen loading="lazy"></iframe>
           <div class="card-body">
             <h5 class="card-title text-center"><b>Sales Office</b></h5>
-
             <div class="info-row">
-              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-geo-alt-fill colorchange" viewBox="0 0 16 16" style="color:black;">
-                <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10m0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6" />
-              </svg>
-              <span>Unit 701, Mt Alexander Road,Moonee Ponds, Victoria, 3039</span>
+              <i class="bi bi-geo-alt-fill"></i><span>Unit 701, Mt Alexander Road, Moonee Ponds, Victoria, 3039</span>
             </div>
             <div class="info-row">
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope-fill mt-1 colorchange" viewBox="0 0 16 16" style="color:black;">
-                <path d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414zM0 4.697v7.104l5.803-3.558zM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586zm3.436-.586L16 11.801V4.697z" />
-              </svg>
-              <span>sales@neemkarolitechnologies.com</span>
+              <i class="bi bi-envelope-fill"></i><span>sales@neemkarolitechnologies.com</span>
             </div>
             <div class="info-row">
-              <a href="tel:+61403948490">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-telephone-fill mt-1 colorchange" viewBox="0 0 16 16" style="color:black;">
-                  <path fill-rule="evenodd" d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.68.68 0 0 0 .178.643l2.457 2.457a.68.68 0 0 0 .644.178l2.189-.547a1.75 1.75 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.6 18.6 0 0 1-7.01-4.42 18.6 18.6 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877z" />
-                </svg>
-                <span>+61 403 948 490</span>
-              </a>
+              <a href="tel:+61403948490"><i class="bi bi-telephone-fill"></i><span>+61 403 948 490</span></a>
             </div>
           </div>
         </div>
